@@ -18,20 +18,20 @@ import TrendingProducts from './TrendingProducts';
 const Home = () => {
     return (
         <div className="body-wrapper">
-         <Header></Header> 
-         <Slider></Slider>   
-         <Category></Category> 
-         <About></About> 
-         <Banner></Banner> 
-         <Product></Product>  
-         <Countdown></Countdown> 
-         <LeatestProduct></LeatestProduct>
-         <AboutUnderLeatest></AboutUnderLeatest>
-         <TrendingProducts></TrendingProducts>
-         <Feature></Feature>
-         <LeatestBlogs></LeatestBlogs>
-         <Brand></Brand>
-         <Footer></Footer>
+            <Header></Header>
+            <Slider></Slider>
+            <Category></Category>
+            <About></About>
+            <Banner></Banner>
+            <Product></Product>
+            <Countdown></Countdown>
+            <LeatestProduct></LeatestProduct>
+            <AboutUnderLeatest></AboutUnderLeatest>
+            <TrendingProducts></TrendingProducts>
+            <Feature></Feature>
+            <LeatestBlogs></LeatestBlogs>
+            <Brand></Brand>
+            <Footer></Footer>
         </div>
     );
 };

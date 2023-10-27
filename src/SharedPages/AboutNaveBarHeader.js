@@ -1,5 +1,12 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
+import Logo from "../assets/logo.png";
+import Logo3 from "../assets/logo-3.png";
+import MenuBanner from "../assets/banner/menu-banner-1.png";
+import Product1 from "../assets/product/1.png";
+import Product2 from "../assets/product/2.png";
+import Product3 from "../assets/product/3.png";
+import Product4 from "../assets/product/4.png";
 
 
 const AboutNaveBarHeader = () => {
@@ -67,7 +74,7 @@ const AboutNaveBarHeader = () => {
                 <div className="row">
                     <div className="col">
                         <div className="site-logo">
-                            <NavLink to="/"><img src="https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/logo.png" alt="Logo"/></NavLink>
+                            <NavLink to="/"><img src={Logo} alt="Logo"/></NavLink>
                         </div>
                     </div>
                     <div className="col header-contact-serarch-column d-none d-lg-block">
@@ -178,7 +185,7 @@ const AboutNaveBarHeader = () => {
                     <div className="col header-menu-column justify-content-center">
                         <div className="sticky-logo">
                             <div className="site-logo">
-                                <a href="index.html"><img src="img/logo-3.png" alt="Logo"/></a>
+                                <a href="index.html"><img src={Logo3} alt="Logo"/></a>
                             </div>
                         </div>
                         <div className="header-menu header-menu-2">
@@ -225,7 +232,7 @@ const AboutNaveBarHeader = () => {
                                                         <li><a href="cart.html">Cart</a></li>
                                                     </ul>
                                                 </li>
-                                                <li><a href="shop.html"><img src="img/banner/menu-banner-1.png" alt="#"/></a>
+                                                <li><a href="shop.html"><img src={MenuBanner} alt="#"/></a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -274,7 +281,7 @@ const AboutNaveBarHeader = () => {
             <div className="mini-cart-product-area ltn__scrollbar">
                 <div className="mini-cart-item clearfix">
                     <div className="mini-cart-img">
-                        <a href="#"><img src="img/product/1.png" alt="Image"/></a>
+                        <a href="#"><img src={Product1} alt="Image"/></a>
                         <span className="mini-cart-item-delete"><i className="icon-cancel"></i></span>
                     </div>
                     <div className="mini-cart-info">
@@ -284,7 +291,7 @@ const AboutNaveBarHeader = () => {
                 </div>
                 <div className="mini-cart-item clearfix">
                     <div className="mini-cart-img">
-                        <a href="#"><img src="img/product/2.png" alt="Image"/></a>
+                        <a href="#"><img src={Product2} alt="Image"/></a>
                         <span className="mini-cart-item-delete"><i className="icon-cancel"></i></span>
                     </div>
                     <div className="mini-cart-info">
@@ -294,7 +301,7 @@ const AboutNaveBarHeader = () => {
                 </div>
                 <div className="mini-cart-item clearfix">
                     <div className="mini-cart-img">
-                        <a href="#"><img src="img/product/3.png" alt="Image"/></a>
+                        <a href="#"><img src={Product3} alt="Image"/></a>
                         <span className="mini-cart-item-delete"><i className="icon-cancel"></i></span>
                     </div>
                     <div className="mini-cart-info">
@@ -304,7 +311,7 @@ const AboutNaveBarHeader = () => {
                 </div>
                 <div className="mini-cart-item clearfix">
                     <div className="mini-cart-img">
-                        <a href="#"><img src="img/product/4.png" alt="Image"/></a>
+                        <a href="#"><img src={Product4} alt="Image"/></a>
                         <span className="mini-cart-item-delete"><i className="icon-cancel"></i></span>
                     </div>
                     <div className="mini-cart-info">
@@ -333,7 +340,7 @@ const AboutNaveBarHeader = () => {
         <div className="ltn__utilize-menu-inner ltn__scrollbar">
             <div className="ltn__utilize-menu-head">
                 <div className="site-logo">
-                    <a href="index.html"><img src="img/logo.png" alt="Logo"/></a>
+                    <NavLink to="/"><img src={Logo} alt="Logo"/></NavLink>
                 </div>
                 <button className="ltn__utilize-close">×</button>
             </div>

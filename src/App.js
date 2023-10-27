@@ -6,14 +6,13 @@ import {
 } from "react-router-dom";
 import AboutNavBar from './Components/NavBarAboutComponents/AboutNavBar';
 import ServicesNavbar from './Components/NavBarAboutComponents/ServicesNavbar';
-
-import ShopGridNabBar from './Components/NavBarShopComponents/ShopGridNabBar';
 import Login from './SharedPages/Login';
 import Register from './SharedPages/Register';
 import ContactNabVar from './Components/NabBarContactComponent/ContactNabVar';
 import ProductDetailsShowById from './Components/ProductsInfo/ProductDetailsShowById';
 import ScrollTOTop from './SharedPages/ScrollTOTop';
 import AccountDetails from './SharedPages/AccountDetails';
+import Shopgrid from './Pages/Shopgrid';
 
 function App() {
   
@@ -31,7 +30,8 @@ function App() {
    {/* navbar about section */}
 
    {/* nabbar shop section */}
-   <Route path="/shopgrid" element={<ShopGridNabBar></ShopGridNabBar>}/> 
+   {/* <Route path="/shopgrid" element={<ShopGridNabBar></ShopGridNabBar>}/>  */}
+   <Route path="/shopgrid" element={<Shopgrid></Shopgrid>}/> 
    {/* nabbar shop section */}
 
     {/* navbar contact */}
@@ -45,7 +45,6 @@ function App() {
 
 
    {/* Login and register */}
-
    <Route path="/login" element={<Login></Login>}/> 
    <Route path="/register" element={<Register></Register>}/> 
    {/* Login and register */}

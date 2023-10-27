@@ -1,5 +1,7 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
+import Logo from "../assets/logo.png";
+import Menubanner1 from "../assets/banner/menu-banner-1.png";
 
 const header = () => {
     return (
@@ -67,7 +69,7 @@ const header = () => {
                     <div className="col">
                         <div className="site-logo-wrap">
                             <div className="site-logo">
-                                <NavLink tO="/"><img src="https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/logo.png" alt="Logo"/></NavLink>
+                                <NavLink tO="/"><img src={Logo} alt="Logo"/></NavLink>
                             </div>
                             <div className="get-support clearfix d-none">
                                 <div className="get-support-icon">
@@ -127,7 +129,7 @@ const header = () => {
                                                         <li><a href="cart.html">Cart</a></li>
                                                     </ul>
                                                 </li>
-                                                <li><a href="shop.html"><img src="https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/banner/menu-banner-1.png" alt="#"/></a>
+                                                <li><a href="shop.html"><img src={Menubanner1} alt="#"/></a>
                                                 </li>
                                             </ul>
                                         </li>
