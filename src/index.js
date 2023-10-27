@@ -6,8 +6,8 @@ import reportWebVitals from './reportWebVitals';
 
 // shahariar
 import "../src/Style/css/style.css"
-import "../src/Style/css/custom.css"
-import "../src/Style/css/font-icons.css"
+// import "../src/Style/css/custom.css"
+// import "../src/Style/css/font-icons.css"
 import "../src/Style/css/responsive.css"
 import "../src/Style/css/plugins.css"
 import "../src/Style/css/sections/_portfolio.css"

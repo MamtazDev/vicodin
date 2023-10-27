@@ -22,8 +22,11 @@ const AboutNaveBarHeader = () => {
                     <div className="col-md-7">
                         <div className="ltn__top-bar-menu">
                             <ul>
-                                <li><a href="mailto:info@webmail.com?Subject=Flower%20greetings%20to%20you"><i className="icon-mail"></i> info@webmail.com</a></li>
-                                <li><a href="locations.html"><i className="icon-placeholder"></i> 15/A, Nest Tower, NYC</a></li>
+                                <li>
+                                    <a href="mailto:info@webmail.com?Subject=Flower%20greetings%20to%20you">
+                                    <i className="fas fa-envelope"></i> info@webmail.com</a>
+                                    </li>
+                                <li><a href="locations.html"><i className="fa-solid fa-location-dot"></i> 15/A, Nest Tower, NYC</a></li>
                             </ul>
                         </div>
                     </div>
@@ -105,7 +108,6 @@ const AboutNaveBarHeader = () => {
                         <div className="ltn__header-options">
                             <ul>
                                 <li className="d-none">
-                                    {/* <!-- ltn__currency-menu --> */}
                                     <div className="ltn__drop-menu ltn__currency-menu">
                                         <ul>
                                             <li><a href="#" className="dropdown-toggle"><span className="active-currency">USD</span></a>
