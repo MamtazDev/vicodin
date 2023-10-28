@@ -2,13 +2,6 @@ import React from 'react';
 import { NavLink } from "react-router-dom";
 import Logo from "../assets/logo.png";
 import Logo3 from "../assets/logo-3.png";
-import MenuBanner from "../assets/banner/menu-banner-1.png";
-import Product1 from "../assets/product/1.png";
-import Product2 from "../assets/product/2.png";
-import Product3 from "../assets/product/3.png";
-import Product4 from "../assets/product/4.png";
-
-
 const AboutNaveBarHeader = () => {
     return (
         <>
@@ -270,7 +263,7 @@ const AboutNaveBarHeader = () => {
                             </div>
                             <div className="btn-wrapper">
                                 <NavLink to="/cart" className="theme-btn-1 btn btn-effect-1">View Cart</NavLink>
-                                <NavLink to="/cart" className="theme-btn-2 btn btn-effect-2">Checkout</NavLink>
+                                <NavLink to="/checkOut" className="theme-btn-2 btn btn-effect-2">Checkout</NavLink>
                             </div>
                             <p>Free Shipping on All Orders Over $100!</p>
                         </div>

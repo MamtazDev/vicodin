@@ -1,10 +1,8 @@
-import React from 'react';
 import AboutNaveBarHeader from '../SharedPages/AboutNaveBarHeader';
 import AboutNavBarFooter from '../SharedPages/AboutNavBarFooter';
 import CallTo from '../Utils/CallTo';
 import BreadCrumb from '../Utils/BreadCrumb';
 import Banner from '../assets/bg/144.jpg';
-import { NavLink } from 'react-router-dom';
 import BillingDetail from '../Components/CheckOutComponent/BillingDetail';
 import PaymentMethod from '../Components/CheckOutComponent/PaymentMethod';
 import CheckOutTotal from '../Components/CheckOutComponent/CheckOutTotal';

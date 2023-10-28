@@ -385,7 +385,7 @@ const header = () => {
                                 </div>
                                 <div className="btn-wrapper">
                                     <NavLink to="/cart" className="theme-btn-1 btn btn-effect-1">View Cart</NavLink>
-                                    <NavLink to="/cart" className="theme-btn-2 btn btn-effect-2">Checkout</NavLink>
+                                    <NavLink to="/checkOut" className="theme-btn-2 btn btn-effect-2">Checkout</NavLink>
                                 </div>
                                 <p>Free Shipping on All Orders Over $100!</p>
                             </div>

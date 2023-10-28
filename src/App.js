@@ -8,13 +8,13 @@ import AboutNavBar from './Components/NavBarAboutComponents/AboutNavBar';
 import ServicesNavbar from './Components/NavBarAboutComponents/ServicesNavbar';
 import Login from './SharedPages/Login';
 import Register from './SharedPages/Register';
-import ContactNabVar from './Components/NabBarContactComponent/ContactNabVar';
 import ScrollTOTop from './SharedPages/ScrollTOTop';
 import AccountDetails from './SharedPages/AccountDetails';
 import Shopgrid from './Pages/Shopgrid';
 import SingleProduct from './Pages/SingleProduct';
 import Cart from './Pages/Cart';
 import CheckOut from './Pages/CheckOut';
+import Contact from './Pages/Contact';
 
 function App() {
 
@@ -38,7 +38,7 @@ function App() {
         {/* Cart Page */}
 
         {/* navbar contact */}
-        <Route path="/contact" element={<ContactNabVar></ContactNabVar>} />
+        <Route path="/contact" element={<Contact></Contact>} />
         <Route path="/accountdetails" element={<AccountDetails></AccountDetails>} />
         {/* navbar contact */}
 
