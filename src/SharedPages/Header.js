@@ -192,8 +192,6 @@ const header = () => {
                 {/* <!-- HEADER AREA END --> */}
 
                 {/* <!-- Utilize Mobile Menu Start --> */}
-
-
                 <div className="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" >
 
                     <div className="offcanvas-body ">
@@ -327,8 +325,6 @@ const header = () => {
 
                     </div>
                 </div>
-
-
                 {/* <!-- Utilize Mobile Menu End --> */}
 
                 {/* <!-- Utilize Cart Menu Start --> */}
@@ -397,8 +393,6 @@ const header = () => {
                         </div>
                     </div>
                 </div>
-
-
                 {/* <!-- Utilize Cart Menu End --> */}
 
                 {/* <!-- Utilize Mobile Menu Start --> */}
@@ -527,6 +521,8 @@ const header = () => {
                     </div>
                 </div>
                 {/* <!-- Utilize Mobile Menu End --> */}
+
+                
                 <div className="ltn__utilize-overlay"></div>
 
             </div>

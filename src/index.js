@@ -4,7 +4,6 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-// shahariar
 import "../src/Style/css/style.css"
 // import "../src/Style/css/custom.css"
 // import "../src/Style/css/font-icons.css"

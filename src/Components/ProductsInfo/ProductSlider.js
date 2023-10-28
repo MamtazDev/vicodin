@@ -110,8 +110,6 @@ const ProductSlider = ({leatestProducts}) => {
                             </div>
                             ))
                             }
-
-                            {/* <!--  --> */}
                         </Slider>
                     </div>
                 </div>

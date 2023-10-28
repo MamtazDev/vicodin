@@ -2,7 +2,7 @@ import Home from './Pages/Home';
 import {
   BrowserRouter,
   Routes,
-  Route,
+  Route
 } from "react-router-dom";
 import AboutNavBar from './Components/NavBarAboutComponents/AboutNavBar';
 import ServicesNavbar from './Components/NavBarAboutComponents/ServicesNavbar';
@@ -15,42 +15,42 @@ import Shopgrid from './Pages/Shopgrid';
 import SingleProduct from './Pages/SingleProduct';
 
 function App() {
+
   return (
-  
-<BrowserRouter>
-<Routes>
-  <Route path="/" element={<Home/>}></Route>
-  {/* navbar about section */}
-  <Route path="/about" element={<AboutNavBar></AboutNavBar>}/> 
-  <Route path="/service" element={<ServicesNavbar></ServicesNavbar>}/> 
-  
-   {/* navbar about section */}
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        {/* navbar about section */}
+        <Route path="/about" element={<AboutNavBar></AboutNavBar>} />
+        <Route path="/service" element={<ServicesNavbar></ServicesNavbar>} />
 
-   {/* nabbar shop section */}
-   {/* <Route path="/shopgrid" element={<ShopGridNabBar></ShopGridNabBar>}/>  */}
-   <Route path="/shopgrid" element={<Shopgrid></Shopgrid>}/> 
-   {/* nabbar shop section */}
+        {/* navbar about section */}
 
-    {/* navbar contact */}
-    <Route path="/contact" element={<ContactNabVar></ContactNabVar>}/>
-    <Route path="/accountdetails" element={<AccountDetails></AccountDetails>}/>
-    {/* navbar contact */}
+        {/* nabbar shop section */}
+        {/* <Route path="/shopgrid" element={<ShopGridNabBar></ShopGridNabBar>}/>  */}
+        <Route path="/shopgrid" element={<Shopgrid></Shopgrid>} />
+        {/* nabbar shop section */}
 
-  {/* Product Details Show */}
-  <Route path="/ProductDetails/:id" element={<SingleProduct></SingleProduct>}/>
-  {/* Product Details Show */}
+        {/* navbar contact */}
+        <Route path="/contact" element={<ContactNabVar></ContactNabVar>} />
+        <Route path="/accountdetails" element={<AccountDetails></AccountDetails>} />
+        {/* navbar contact */}
 
-
-   {/* Login and register */}
-   <Route path="/login" element={<Login></Login>}/> 
-   <Route path="/register" element={<Register></Register>}/> 
-   {/* Login and register */}
+        {/* Product Details Show */}
+        <Route path="/ProductDetails/:id" element={<SingleProduct></SingleProduct>} />
+        {/* Product Details Show */}
 
 
-</Routes>
+        {/* Login and register */}
+        <Route path="/login" element={<Login></Login>} />
+        <Route path="/register" element={<Register></Register>} />
+        {/* Login and register */}
 
-<ScrollTOTop></ScrollTOTop>
-</BrowserRouter>
+
+      </Routes>
+
+      <ScrollTOTop></ScrollTOTop>
+    </BrowserRouter>
   );
 }
 

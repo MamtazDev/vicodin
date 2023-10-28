@@ -1,11 +1,12 @@
-import { NavLink } from "react-router-dom";
-import Banner from "../assets/bg/144.jpg"
+import { NavLink, useLocation } from "react-router-dom";
 
-const BreadCrumb = () => {
+const BreadCrumb = ({bannerImg, title}) => {
+    const location = useLocation();
+    const pathnameWithoutSlash = location.pathname.slice(1);
     return (
         <div>
               <div className="ltn__breadcrumb-area text-left bg-overlay-white-30 bg-image " style={{
-                backgroundImage: `url(${Banner})`,
+                backgroundImage: `url(${bannerImg})`,
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat'
@@ -14,11 +15,11 @@ const BreadCrumb = () => {
                     <div className="row">
                         <div className="col-lg-12">
                             <div className="ltn__breadcrumb-inner">
-                                <h1 className="page-title">Product Details</h1>
+                                <h1 className="page-title">{title}</h1>
                                 <div className="ltn__breadcrumb-list">
                                     <ul>
                                         <li><NavLink to="/"><span className="ltn__secondary-color"><i className="fas fa-home"></i></span> Home</NavLink></li>
-                                        <li>Product Details</li>
+                                        <li>{pathnameWithoutSlash}</li>
                                     </ul>
                                 </div>
                             </div>
