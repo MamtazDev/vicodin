@@ -9,16 +9,12 @@ import ServicesNavbar from './Components/NavBarAboutComponents/ServicesNavbar';
 import Login from './SharedPages/Login';
 import Register from './SharedPages/Register';
 import ContactNabVar from './Components/NabBarContactComponent/ContactNabVar';
-import ProductDetailsShowById from './Components/ProductsInfo/ProductDetailsShowById';
 import ScrollTOTop from './SharedPages/ScrollTOTop';
 import AccountDetails from './SharedPages/AccountDetails';
 import Shopgrid from './Pages/Shopgrid';
 import SingleProduct from './Pages/SingleProduct';
 
 function App() {
-  
-  
-  
   return (
   
 <BrowserRouter>
@@ -41,7 +37,6 @@ function App() {
     {/* navbar contact */}
 
   {/* Product Details Show */}
-  {/* <Route path="/ProductDetails/:id" element={<ProductDetailsShowById></ProductDetailsShowById>}/> */}
   <Route path="/ProductDetails/:id" element={<SingleProduct></SingleProduct>}/>
   {/* Product Details Show */}
 
