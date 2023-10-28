@@ -13,6 +13,7 @@ import ProductDetailsShowById from './Components/ProductsInfo/ProductDetailsShow
 import ScrollTOTop from './SharedPages/ScrollTOTop';
 import AccountDetails from './SharedPages/AccountDetails';
 import Shopgrid from './Pages/Shopgrid';
+import SingleProduct from './Pages/SingleProduct';
 
 function App() {
   
@@ -40,7 +41,8 @@ function App() {
     {/* navbar contact */}
 
   {/* Product Details Show */}
-  <Route path="/ProductDetails/:id" element={<ProductDetailsShowById></ProductDetailsShowById>}/>
+  {/* <Route path="/ProductDetails/:id" element={<ProductDetailsShowById></ProductDetailsShowById>}/> */}
+  <Route path="/ProductDetails/:id" element={<SingleProduct></SingleProduct>}/>
   {/* Product Details Show */}
 
 

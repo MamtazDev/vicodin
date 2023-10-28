@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import AboutNavBarFooter from '../../SharedPages/AboutNavBarFooter';
-import AboutNaveBarHeader from '../../SharedPages/AboutNaveBarHeader';
 import { NavLink, useParams } from "react-router-dom";
 import Slider from "react-slick";
+import AboutNaveBarHeader from '../SharedPages/AboutNaveBarHeader';
+import AboutNavBarFooter from '../SharedPages/AboutNavBarFooter';
+import CallTo from '../Utils/CallTo';
+import ProductSlider from '../Components/ProductsInfo/ProductSlider';
 
-const ProductDetailsShowById = () => {
+const SingleProduct = () => {
 
     const { id } = useParams()
 
     const [leatestProducts, setLeatestProducts] = useState([]);
+    
     const [singleProduct, setSingleProduct] = useState([]);
     console.log(singleProduct)
 
@@ -19,53 +22,12 @@ const ProductDetailsShowById = () => {
     }, [])
 
     useEffect(() => {
-
         leatestProducts?.map(leatestProduct => (
             leatestProduct?.productID == id ? setSingleProduct(leatestProduct) : <></>
 
         ))
     })
 
-    const settings = {
-        infinite: true,
-        arrows: false,
-        speed: 600,
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    infinite: true,
-                    arrows: false,
-                    speed: 600,
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    infinite: true,
-                    arrows: false,
-                    speed: 600,
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    dots: true,
-                    infinite: true,
-                    arrows: false,
-                    speed: 600,
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                }
-            }
-        ]
-    };
     return (
         <>
             <AboutNaveBarHeader></AboutNaveBarHeader>
@@ -151,8 +113,6 @@ const ProductDetailsShowById = () => {
                                         </div>
                                     </div>
 
-
-
                                     <div className="col-md-6">
                                         <div className="modal-product-info shop-details-info pl-0">
                                             <div className="product-ratting">
@@ -233,6 +193,9 @@ const ProductDetailsShowById = () => {
                                     </div>
                                 </div>
                             </div>
+
+
+
                             {/* <!-- Shop Tab Start --> */}
                             <div className="ltn__shop-details-tab-inner ltn__shop-details-tab-inner-2">
                                 <div className="ltn__shop-details-tab-menu">
@@ -375,6 +338,10 @@ const ProductDetailsShowById = () => {
                             </div>
                             {/* <!-- Shop Tab End --> */}
                         </div>
+
+
+
+                        
                         <div className="col-lg-4">
                             <aside className="sidebar ltn__shop-sidebar ltn__right-sidebar">
                                 {/* <!-- Top Rated Product Widget --> */}
@@ -421,97 +388,13 @@ const ProductDetailsShowById = () => {
 
 
             {/* <!-- PRODUCT SLIDER AREA START --> */}
-            <div className="ltn__product-slider-area ltn__product-gutter pb-70">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-12">
-                            <div className="section-title-area ltn__section-title-2">
-                                <h4 className="title-2">Related Products<span>.</span></h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row ltn__related-product-slider-one-active slick-arrow-1">
-                        {/* <!-- ltn__product-item --> */}
-
-                        <Slider {...settings}>
-
-                            {/* <!-- ltn__product-item --> */}
-                            {leatestProducts.map(leatestProductSingle => (<div className="col-lg-12">
-                                <div className="ltn__product-item ltn__product-item-3 text-center">
-                                    <div className="product-img">
-                                        <NavLink to={`/ProductDetails/${leatestProductSingle?.productID}`}><img src={leatestProductSingle.imageUrl} alt="#" /></NavLink>
-                                        <div className="product-badge">
-                                            <ul>
-                                                <li className="sale-badge">New</li>
-                                            </ul>
-                                        </div>
-                                        <div className="product-hover-action">
-                                            <ul>
-                                                <li>
-                                                    <a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
-                                                        <i className="far fa-eye"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" title="Add to Cart" data-bs-toggle="modal" data-bs-target="#add_to_cart_modal">
-                                                        <i className="fas fa-shopping-cart"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
-                                                        <i className="far fa-heart"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div className="product-info">
-                                        <div className="product-ratting">
-                                            <ul>
-                                                <li><a href="#"><i className="fas fa-star"></i></a></li>
-                                                <li><a href="#"><i className="fas fa-star"></i></a></li>
-                                                <li><a href="#"><i className="fas fa-star"></i></a></li>
-                                                <li><a href="#"><i className="fas fa-star-half-alt"></i></a></li>
-                                                <li><a href="#"><i className="far fa-star"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <h2 className="product-title"><NavLink to={`/ProductDetails/${leatestProductSingle?.productID}`}>{leatestProductSingle.productName}</NavLink></h2>
-                                        <div className="product-price">
-                                            <span>{leatestProductSingle.productPrice}</span>
-                                            <del>{leatestProductSingle.productPreviousPrice}</del>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            ))
-                            }
-
-                            {/* <!--  --> */}
-                        </Slider>
-                    </div>
-                </div>
-            </div>
+            <ProductSlider leatestProducts = {leatestProducts}></ProductSlider>
             {/* <!-- PRODUCT SLIDER AREA END --> */}
 
             
 
             {/* <!-- CALL TO ACTION START (call-to-action-6) --> */}
-            <div className="ltn__call-to-action-area call-to-action-6 before-bg-bottom" data-bs-bg="img/1.jpg--">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-12">
-                            <div className="call-to-action-inner call-to-action-inner-6 ltn__secondary-bg position-relative text-center---">
-                                <div className="coll-to-info text-color-white">
-                                    <h1>Buy medical disposable face mask <br /> to protect your loved ones</h1>
-                                </div>
-                                <div className="btn-wrapper">
-                                    <a className="btn btn-effect-3 btn-white" href="shop.html">Explore Products <i className="icon-next"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+            <CallTo></CallTo>
             {/* <!-- CALL TO ACTION END --> */}
 
 
@@ -522,4 +405,4 @@ const ProductDetailsShowById = () => {
     );
 };
 
-export default ProductDetailsShowById;
+export default SingleProduct;
