@@ -1,18 +1,18 @@
 import React from 'react';
 import Footer from '../SharedPages/Footer';
 import Header from '../SharedPages/Header';
-import About from './About';
-import AboutUnderLeatest from './AboutUnderLeatest';
-import Banner from './Banner';
-import Brand from './Brand';
-import Category from './Category';
-import Countdown from './Countdown';
-import Feature from './Feature';
-import LeatestBlogs from './LeatestBlogs';
-import LeatestProduct from './LeatestProduct';
-import Product from './Product';
-import Slider from './Slider';
-import TrendingProducts from './TrendingProducts';
+import AboutUnderLeatest from '../Components/HomeComponent/AboutUnderLeatest';
+import Banner from '../Components/HomeComponent/Banner';
+import Brand from '../Components/HomeComponent/Brand';
+import Category from '../Components/HomeComponent/Category';
+import Countdown from '../Components/HomeComponent/Countdown';
+import Feature from '../Components/HomeComponent/Feature';
+import LeatestBlogs from '../Components/HomeComponent/LeatestBlogs';
+import LeatestProduct from '../Components/HomeComponent/LeatestProduct';
+import Product from '../Components/HomeComponent/Product';
+import Slider from '../Components/HomeComponent/Slider';
+import TrendingProducts from '../Components/HomeComponent/TrendingProducts';
+import About from '../Components/HomeComponent/About';
 
 
 const Home = () => {
