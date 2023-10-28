@@ -384,8 +384,8 @@ const header = () => {
                                     <h5>Subtotal: <span>$310.00</span></h5>
                                 </div>
                                 <div className="btn-wrapper">
-                                    <a href="cart.html" className="theme-btn-1 btn btn-effect-1">View Cart</a>
-                                    <a href="cart.html" className="theme-btn-2 btn btn-effect-2">Checkout</a>
+                                    <NavLink to="/cart" className="theme-btn-1 btn btn-effect-1">View Cart</NavLink>
+                                    <NavLink to="/cart" className="theme-btn-2 btn btn-effect-2">Checkout</NavLink>
                                 </div>
                                 <p>Free Shipping on All Orders Over $100!</p>
                             </div>
@@ -522,7 +522,7 @@ const header = () => {
                 </div>
                 {/* <!-- Utilize Mobile Menu End --> */}
 
-                
+
                 <div className="ltn__utilize-overlay"></div>
 
             </div>

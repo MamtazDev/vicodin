@@ -13,6 +13,8 @@ import ScrollTOTop from './SharedPages/ScrollTOTop';
 import AccountDetails from './SharedPages/AccountDetails';
 import Shopgrid from './Pages/Shopgrid';
 import SingleProduct from './Pages/SingleProduct';
+import Cart from './Pages/Cart';
+import CheckOut from './Pages/CheckOut';
 
 function App() {
 
@@ -26,10 +28,14 @@ function App() {
 
         {/* navbar about section */}
 
-        {/* nabbar shop section */}
-        {/* <Route path="/shopgrid" element={<ShopGridNabBar></ShopGridNabBar>}/>  */}
+        {/* shop section */}
         <Route path="/shopgrid" element={<Shopgrid></Shopgrid>} />
-        {/* nabbar shop section */}
+        {/* shop section */}
+
+        {/* Cart Page */}
+        <Route path="/cart" element={<Cart></Cart>}/>
+        <Route path="/checkOut" element={<CheckOut></CheckOut>}/>
+        {/* Cart Page */}
 
         {/* navbar contact */}
         <Route path="/contact" element={<ContactNabVar></ContactNabVar>} />
