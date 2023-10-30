@@ -58,7 +58,7 @@ const LeatestBlogs = () => {
                     <div className="row">
                         <div className="col-lg-12">
                             <div className="section-title-area ltn__section-title-2--- text-center">
-                                <h6 className="section-subtitle section-subtitle-2 ltn__secondary-color d-none">News & Blogs</h6>
+                                <h6 className="section-subtitle section-subtitle-2 ltn__secondary-color">News & Blogs</h6>
                                 <h1 className="section-title">Leatest Blogs</h1>
                             </div>
                         </div>
