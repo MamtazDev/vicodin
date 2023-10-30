@@ -7086,10 +7086,10 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   margin-left: -2px;
   cursor: pointer;
   background: white;
-  /* -webkit-transform: translate3d(-50%, -50%, 0); */
- /* transform: translate3d(160%, 0%, 0); */
+  -webkit-transform: translate3d(-50%, -50%, 0);
+ transform: translate3d(-50%, -50%, 0);
 
- transform: translate3d(174%, 0%, 0) !important;
+ /* transform: translate3d(174%, 0%, 0) !important; */
 }
 
 .mobile-menu-toggle svg path {
