@@ -15,6 +15,7 @@ import Cart from './Pages/Cart';
 import CheckOut from './Pages/CheckOut';
 import Contact from './Pages/Contact';
 import AboutUs from './Pages/About';
+import Service from './Pages/Service';
 
 function App() {
 
@@ -24,7 +25,7 @@ function App() {
         <Route path="/" element={<Home />}></Route>
         {/* navbar about section */}
         <Route path="/about" element={<AboutUs></AboutUs>} />
-        <Route path="/service" element={<ServicesNavbar></ServicesNavbar>} />
+        <Route path="/service" element={<Service></Service>} />
 
         {/* navbar about section */}
 

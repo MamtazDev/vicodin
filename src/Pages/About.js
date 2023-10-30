@@ -14,133 +14,11 @@ import ClientFeedBack from '../Components/NavBarAboutComponents/ClientFeedBack';
 import Video from '../Components/NavBarAboutComponents/Video';
 import Team from '../Components/NavBarAboutComponents/Team';
 import CounterUp from '../Components/NavBarAboutComponents/CounterUp';
+import CoreFeature from '../Components/NavBarAboutComponents/CoreFeature';
 
 
 const About = () => {
 
-    const ourExpeExpertDoctors = [{
-        "name": "Rosalina D. William",
-        "title": "Scientist",
-        "faceBook": "https://www.facebook.com/",
-        "twiter": "https://twitter.com/i/flow/login",
-        "linkedIn": "https://www.linkedin.com/",
-        "imageUrl": "https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/team/4.jpg"
-    },
-
-    {
-        "name": "Kelian Anderson",
-        "title": "Dentist",
-        "faceBook": "https://www.facebook.com/",
-        "twiter": "https://twitter.com/i/flow/login",
-        "linkedIn": "https://www.linkedin.com/",
-        "imageUrl": "https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/team/2.jpg"
-    },
-
-    {
-        "name": "Miranda H. Halim",
-        "title": "Caardiologist",
-        "faceBook": "https://www.facebook.com/",
-        "twiter": "https://twitter.com/i/flow/login",
-        "linkedIn": "https://www.linkedin.com/",
-        "imageUrl": "https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/team/5.jpg"
-    }
-    ]
-
-    const coreFeatures = [{
-        "imageUrl": "https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/icons/icon-img/24.png",
-        "service": "Free Delivery",
-        "info": "Lorem ipsum dolor sit ame it, consectetur adipisicing elit, sed do eiusmod te mp or incididunt ut labore."
-    },
-    {
-        "imageUrl": "https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/icons/icon-img/25.png",
-        "service": "100% Cash Back",
-        "info": "Lorem ipsum dolor sit ame it, consectetur adipisicing elit, sed do eiusmod te mp or incididunt ut labore."
-    },
-    {
-        "imageUrl": "https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/icons/icon-img/26.png",
-        "service": "Quality Product",
-        "info": "Lorem ipsum dolor sit ame it, consectetur adipisicing elit, sed do eiusmod te mp or incididunt ut labore."
-    },
-    {
-        "imageUrl": "https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/icons/icon-img/27.png",
-        "service": "24/7 Support",
-        "info": "Lorem ipsum dolor sit ame it, consectetur adipisicing elit, sed do eiusmod te mp or incididunt ut labore."
-    }]
-
-    const clientsFeedbacks = [
-        {
-            "name": "Rosalina D. William",
-            "title": "Founder",
-            "info": "Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            "imageUrl": "https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/testimonial/1.jpg"
-        },
-        {
-            "name": "Rosalina D. William",
-            "title": "Founder",
-            "info": "Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-            "imageUrl": "https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/testimonial/2.jpg"
-        },
-        {
-            "name": "Rosalina D. William",
-            "title": "Founder",
-            "info": "Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-            "imageUrl": "https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/testimonial/5.jpg"
-        },
-        {
-            "name": "Rosalina D. William",
-            "title": "Founder",
-            "info": "Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-            "imageUrl": "https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/testimonial/6.jpg"
-        },
-        {
-            "name": "Rosalina D. William",
-            "title": "Founder",
-            "info": "Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-            "imageUrl": "https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/testimonial/7.jpg"
-        }
-
-    ]
-
-    const settings = {
-        infinite: true,
-        arrows: false,
-        speed: 600,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    infinite: true,
-                    arrows: false,
-                    speed: 600,
-                    slidesToShow: 4,
-                    slidesToScroll: 4,
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    infinite: true,
-                    arrows: false,
-                    speed: 600,
-                    slidesToShow: 5,
-                    slidesToScroll: 5,
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    //  dots: true,
-                    infinite: true,
-                    arrows: false,
-                    speed: 600,
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                }
-            }
-        ]
-    };
     return (
         <>
 
@@ -163,134 +41,16 @@ const About = () => {
                 {/* <!-- COUNTDOWN AREA END --> */}
 
                 {/* <!-- FEATURE AREA START ( Feature - 6) --> */}
-                <div className="ltn__feature-area pt-90 pb-90">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-12">
-                                <div className="section-title-area ltn__section-title-2--- text-center">
-                                    <h1 className="section-title">Core Features</h1>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row ltn__custom-gutter">
-                            {coreFeatures.map(coreFeature => (<div className="col-lg-3 col-sm-6 col-12">
-                                <div className="ltn__feature-item ltn__feature-item-6 text-center">
-                                    <div className="ltn__feature-icon">
-                                        {/* <!-- <span><i className="flaticon-apartment"></i></span> --> */}
-                                        <img src={coreFeature.imageUrl} alt="#" />
-                                    </div>
-                                    <div className="ltn__feature-info">
-                                        <h4><a href="service-details.html">{coreFeature.service}</a></h4>
-                                        <p>{coreFeature.info}</p>
-                                    </div>
-                                </div>
-                            </div>))
-                            }
-
-                        </div>
-                    </div>
-                </div>
+                <CoreFeature></CoreFeature>
                 {/* <!-- FEATURE AREA END --> */}
 
-                {/* <!-- PROGRESS BAR AREA START --> */}
-                <div className="ltn__progress-bar-area section-bg-1 pt-120 pb-10 mb-120 d-none">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-12">
-                                <div className="ltn__progress-bar-wrap">
-                                    <div className="ltn__progress-bar-inner">
-                                        <div className="row">
-                                            <div className="col-lg-3 col-sm-6">
-                                                <div className="ltn__progress-bar-item-2 text-center">
-                                                    <div className="progress" data-value='78'>
-                                                        <span className="progress-left">
-                                                            <span className="progress-bar border-primary"></span>
-                                                        </span>
-                                                        <span className="progress-right">
-                                                            <span className="progress-bar border-primary"></span>
-                                                        </span>
-                                                        <div className="progress-value">
-                                                            <div className="progress-count">78<sup className="small">%</sup></div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="ltn__progress-info">
-                                                        <h3>Project Done</h3>
-                                                        <p>Construction Simulator</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-3 col-sm-6">
-                                                <div className="ltn__progress-bar-item-2 text-center">
-                                                    <div className="progress" data-value='62'>
-                                                        <span className="progress-left">
-                                                            <span className="progress-bar border-danger"></span>
-                                                        </span>
-                                                        <span className="progress-right">
-                                                            <span className="progress-bar border-danger"></span>
-                                                        </span>
-                                                        <div className="progress-value">
-                                                            <div className="progress-count">62<sup className="small">%</sup></div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="ltn__progress-info">
-                                                        <h3>Country Cover</h3>
-                                                        <p>Construction Simulator</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-3 col-sm-6">
-                                                <div className="ltn__progress-bar-item-2 text-center">
-                                                    <div className="progress" data-value='50'>
-                                                        <span className="progress-left">
-                                                            <span className="progress-bar border-success"></span>
-                                                        </span>
-                                                        <span className="progress-right">
-                                                            <span className="progress-bar border-success"></span>
-                                                        </span>
-                                                        <div className="progress-value">
-                                                            <div className="progress-count">50<sup className="small">%</sup></div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="ltn__progress-info">
-                                                        <h3>Completed Co.</h3>
-                                                        <p>Construction Simulator</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-3 col-sm-6">
-                                                <div className="ltn__progress-bar-item-2 text-center">
-                                                    <div className="progress" data-value='90'>
-                                                        <span className="progress-left">
-                                                            <span className="progress-bar border-warning"></span>
-                                                        </span>
-                                                        <span className="progress-right">
-                                                            <span className="progress-bar border-warning"></span>
-                                                        </span>
-                                                        <div className="progress-value">
-                                                            <div className="progress-count">90<sup className="small">%</sup></div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="ltn__progress-info">
-                                                        <h3>Happy Clients</h3>
-                                                        <p>Construction Simulator</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {/* <!-- PROGRESS BAR AREA END --> */}
 
                 {/* <!-- COUNTER UP AREA START --> */}
                <CounterUp></CounterUp>
                 {/* <!-- COUNTER UP AREA END --> */}
 
                 {/* <!-- TEAM AREA START (Team - 3) --> */}
-               <Team ourExpeExpertDoctors = {ourExpeExpertDoctors}></Team>
+               <Team></Team>
                 {/* <!-- TEAM AREA END --> */}
 
                 {/* <!-- VIDEO AREA START --> */}
@@ -298,7 +58,7 @@ const About = () => {
                 {/* <!-- VIDEO AREA END --> */}
 
                 {/* <!-- TESTIMONIAL AREA START (testimonial-4) --> */}
-                <ClientFeedBack clientsFeedbacks = {clientsFeedbacks} settings= {settings}></ClientFeedBack>
+                <ClientFeedBack></ClientFeedBack>
                 {/* <!-- TESTIMONIAL AREA END --> */}
 
                 {/* <!-- FAQ AREA START (faq-2) (ID > accordion_2) --> */}

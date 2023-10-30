@@ -1,7 +1,34 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-const Team = ({ ourExpeExpertDoctors }) => {
+const Team = () => {
+    const ourExpeExpertDoctors = [{
+        "name": "Rosalina D. William",
+        "title": "Scientist",
+        "faceBook": "https://www.facebook.com/",
+        "twiter": "https://twitter.com/i/flow/login",
+        "linkedIn": "https://www.linkedin.com/",
+        "imageUrl": "https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/team/4.jpg"
+    },
+
+    {
+        "name": "Kelian Anderson",
+        "title": "Dentist",
+        "faceBook": "https://www.facebook.com/",
+        "twiter": "https://twitter.com/i/flow/login",
+        "linkedIn": "https://www.linkedin.com/",
+        "imageUrl": "https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/team/2.jpg"
+    },
+
+    {
+        "name": "Miranda H. Halim",
+        "title": "Caardiologist",
+        "faceBook": "https://www.facebook.com/",
+        "twiter": "https://twitter.com/i/flow/login",
+        "linkedIn": "https://www.linkedin.com/",
+        "imageUrl": "https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/team/5.jpg"
+    }
+    ]
     return (
         <div>
             <div className="ltn__team-area pt-115 pb-90">
