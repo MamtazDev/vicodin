@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Countdown from '../Components/HomeComponent/Countdown';
-import { NavLink } from 'react-router-dom';
 import AboutSection from '../Components/HomeComponent/About';
 import AboutNaveBarHeader from '../SharedPages/AboutNaveBarHeader';
 import AboutNavBarFooter from '../SharedPages/AboutNavBarFooter';

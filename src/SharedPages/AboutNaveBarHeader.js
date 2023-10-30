@@ -114,8 +114,7 @@ const AboutNaveBarHeader = () => {
                                                             <li><NavLink to="/login">Sign in</NavLink></li>
                                                             <li><NavLink to="/register">Register</NavLink></li>
                                                             <li><NavLink to="/accountdetails">My Account</NavLink></li>
-                                                            {/* <li><a href="account.html">My Account</a></li> */}
-                                                            <li><a href="wishlist.html">Wishlist</a></li>
+                                                            <li><NavLink to="/wishlist">Wishlist</NavLink></li>
                                                         </ul>
                                                     </li>
                                                 </ul>
@@ -123,11 +122,11 @@ const AboutNaveBarHeader = () => {
                                         </li>
                                         <li>
                                             {/* <!-- mini-cart 2 --> */}
-                                            <div className="mini-cart-icon" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                                                <a href="#ltn__utilize-cart-menu" className="ltn__utilize-toggle">
+                                            <div className="mini-cart-icon" type="button" >
+                                                <NavLink to="cart" className="ltn__utilize-toggle">
                                                     <i className="fa-solid fa-cart-shopping"></i>
                                                     <sup>2</sup>
-                                                </a>
+                                                </NavLink>
                                             </div>
 
                                             {/* <div className="mini-cart-icon mini-cart-icon-2">
@@ -157,7 +156,7 @@ const AboutNaveBarHeader = () => {
                             <div className="col header-menu-column justify-content-center">
                                 <div className="sticky-logo">
                                     <div className="site-logo">
-                                        <a href="index.html"><img src={Logo3} alt="Logo" /></a>
+                                        <NavLink to="/"><img src={Logo3} alt="Logo" /></NavLink>
                                     </div>
                                 </div>
                                 <div className="header-menu header-menu-2">
@@ -166,6 +165,7 @@ const AboutNaveBarHeader = () => {
                                             <ul>
                                                 <li><NavLink to="/">Home</NavLink></li>
                                                 <li><NavLink to="/about">About</NavLink></li>
+                                                <li><NavLink to="/service">Service</NavLink></li>
                                                 <li><NavLink to="/shopgrid">Shop</NavLink></li>
                                                 <li><NavLink to="/contact">Contact</NavLink></li>
                                             </ul>
@@ -191,13 +191,13 @@ const AboutNaveBarHeader = () => {
                             {/* <!-- Mobile Menu Button --> */}
                             <div className="mobile-menu-toggle d-lg-none">
                                 <span>MENU</span>
-                                <a href="#ltn__utilize-mobile-menu" className="ltn__utilize-toggle">
+                                <div href="" className="ltn__utilize-toggle">
                                     <svg viewBox="0 0 800 600">
                                         <path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" id="top"></path>
                                         <path d="M300,320 L540,320" id="middle"></path>
                                         <path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" id="bottom" transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
                                     </svg>
-                                </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -205,73 +205,7 @@ const AboutNaveBarHeader = () => {
             </div>
             {/* <!-- MOBILE MENU END --> */}
 
-            {/* <!-- Utilize Cart Menu Start --> */}
-            <div className="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" style={{ zIndex: 9999 }}>
-                <div className="offcanvas-header">
-                </div>
-                <div className="offcanvas-body">
-                    <div className="ltn__utilize-menu-inner ltn__scrollbar">
-                        <div className="ltn__utilize-menu-head">
-                            <span className="ltn__utilize-menu-title">Cart</span>
-                            <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                        </div>
-                        <div className="mini-cart-product-area ltn__scrollbar">
-                            <div className="mini-cart-item clearfix">
-                                <div className="mini-cart-img">
-                                    <a href="#"><img src="https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/product/1.png" alt="Image" /></a>
-                                    <span className="mini-cart-item-delete"><i className="icon-cancel"></i></span>
-                                </div>
-                                <div className="mini-cart-info">
-                                    <h6><a href="#">Antiseptic Spray</a></h6>
-                                    <span className="mini-cart-quantity">1 x $65.00</span>
-                                </div>
-                            </div>
-                            <div className="mini-cart-item clearfix">
-                                <div className="mini-cart-img">
-                                    <a href="#"><img src="https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/product/2.png" /></a>
-                                    <span className="mini-cart-item-delete"><i className="icon-cancel"></i></span>
-                                </div>
-                                <div className="mini-cart-info">
-                                    <h6><a href="#">Digital Stethoscope</a></h6>
-                                    <span className="mini-cart-quantity">1 x $85.00</span>
-                                </div>
-                            </div>
-                            <div className="mini-cart-item clearfix">
-                                <div className="mini-cart-img">
-                                    <a href="#"><img src="https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/product/3.png" alt="Image" /></a>
-                                    <span className="mini-cart-item-delete"><i className="icon-cancel"></i></span>
-                                </div>
-                                <div className="mini-cart-info">
-                                    <h6><a href="#">Cosmetic Containers</a></h6>
-                                    <span className="mini-cart-quantity">1 x $92.00</span>
-                                </div>
-                            </div>
-                            <div className="mini-cart-item clearfix">
-                                <div className="mini-cart-img">
-                                    <a href="#"><img src="https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/product/4.png" alt="Image" /></a>
-                                    <span className="mini-cart-item-delete"><i className="icon-cancel"></i></span>
-                                </div>
-                                <div className="mini-cart-info">
-                                    <h6><a href="#">Thermometer Gun</a></h6>
-                                    <span className="mini-cart-quantity">1 x $68.00</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="mini-cart-footer">
-                            <div className="mini-cart-sub-total">
-                                <h5>Subtotal: <span>$310.00</span></h5>
-                            </div>
-                            <div className="btn-wrapper">
-                                <NavLink to="/cart" className="theme-btn-1 btn btn-effect-1">View Cart</NavLink>
-                                <NavLink to="/checkOut" className="theme-btn-2 btn btn-effect-2">Checkout</NavLink>
-                            </div>
-                            <p>Free Shipping on All Orders Over $100!</p>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            {/* <!-- Utilize Cart Menu End --> */}
+         
 
             {/* <!-- Utilize Mobile Menu Start --> */}
             <div id="ltn__utilize-mobile-menu" className="ltn__utilize ltn__utilize-mobile-menu">

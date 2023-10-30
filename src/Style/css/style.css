@@ -7081,12 +7081,15 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   top: 50%;
   left: 50%;
   width: 50px;
-  height: 60px;
+  height: 50px !important;
   margin-top: -2px;
   margin-left: -2px;
   cursor: pointer;
-  -webkit-transform: translate3d(-50%, -50%, 0);
-  transform: translate3d(-50%, -50%, 0);
+  background: white;
+  /* -webkit-transform: translate3d(-50%, -50%, 0); */
+ /* transform: translate3d(160%, 0%, 0); */
+
+ transform: translate3d(174%, 0%, 0) !important;
 }
 
 .mobile-menu-toggle svg path {
@@ -19544,4 +19547,6 @@ input.cart-plus-minus-box {
 
 
 
-
+.toggleBg svg{
+  display: inline-block !important;
+}
