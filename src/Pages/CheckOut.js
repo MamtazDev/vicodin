@@ -6,6 +6,7 @@ import Banner from '../assets/bg/144.jpg';
 import BillingDetail from '../Components/CheckOutComponent/BillingDetail';
 import PaymentMethod from '../Components/CheckOutComponent/PaymentMethod';
 import CheckOutTotal from '../Components/CheckOutComponent/CheckOutTotal';
+import { NavLink } from 'react-router-dom';
 
 const CheckOut = () => {
     return (
@@ -41,7 +42,7 @@ const CheckOut = () => {
                                                 </div>
                                                 <button className="btn theme-btn-1 btn-effect-1 text-uppercase">Login</button>
                                                 <label className="input-info-save mb-0"><input type="checkbox" name="agree" /> Remember me</label>
-                                                <p className="mt-30"><a href="register.html">Lost your password?</a></p>
+                                                <p className="mt-30"><NavLink to="/register">Lost your password?</NavLink></p>
                                             </form>
                                         </div>
                                     </div>

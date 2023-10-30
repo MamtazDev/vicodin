@@ -48,7 +48,7 @@ const CartProductList = () => {
                         <tr>
                             <td className="cart-product-remove">x</td>
                             <td className="cart-product-image">
-                                <NavLink href="product-details.html">
+                                <NavLink to="">
                                     <img src={Product3} alt="#" />
                                 </NavLink>
                             </td>
