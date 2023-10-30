@@ -11,16 +11,12 @@ import LeatestBlogs from '../Components/HomeComponent/LeatestBlogs';
 import AboutFeature from '../Components/NavBarAboutComponents/AboutFeature';
 import Faq from '../Components/NavBarAboutComponents/Faq';
 import ClientFeedBack from '../Components/NavBarAboutComponents/ClientFeedBack';
+import Video from '../Components/NavBarAboutComponents/Video';
+import Team from '../Components/NavBarAboutComponents/Team';
+import CounterUp from '../Components/NavBarAboutComponents/CounterUp';
 
 
 const About = () => {
-
-    const [leatestBloges, setleatestBloge] = useState([]);
-    useEffect(() => {
-        fetch("leatestBloge.json")
-            .then((res) => res.json())
-            .then(data => setleatestBloge(data))
-    }, [])
 
     const ourExpeExpertDoctors = [{
         "name": "Rosalina D. William",
@@ -290,111 +286,15 @@ const About = () => {
                 {/* <!-- PROGRESS BAR AREA END --> */}
 
                 {/* <!-- COUNTER UP AREA START --> */}
-                <div className="ltn__counterup-area section-bg-1 bg-image bg-overlay-theme-black-80--- pt-115 pb-70" data-bs-bg="img/bg/30.jpg">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-md-3 col-sm-6 align-self-center">
-                                <div className="ltn__counterup-item text-center">
-                                    <div className="counter-icon">
-                                        {/* <!-- <img src="img/icons/icon-img/2.png" alt="#">  --> */}
-                                        <i className="flaticon-add-user-1"></i>
-                                    </div>
-                                    <h1><span className="counter">733</span><span className="counterUp-icon">+</span> </h1>
-                                    <h6>Active Clients</h6>
-                                </div>
-                            </div>
-                            <div className="col-md-3 col-sm-6 align-self-center">
-                                <div className="ltn__counterup-item text-center">
-                                    <div className="counter-icon">
-                                        {/* <!-- <img src="img/icons/icon-img/3.png" alt="#">  --> */}
-                                        <i className="flaticon-dining-table-with-chairs"></i>
-                                    </div>
-                                    <h1><span className="counter">33</span><span className="counterUp-letter">K</span><span className="counterUp-icon">+</span> </h1>
-                                    <h6>Cup Of Coffee</h6>
-                                </div>
-                            </div>
-                            <div className="col-md-3 col-sm-6 align-self-center">
-                                <div className="ltn__counterup-item text-center">
-                                    <div className="counter-icon">
-                                        {/* <!-- <img src="img/icons/icon-img/3.png" alt="#">  --> */}
-                                        <i className="flaticon-package"></i>
-                                    </div>
-                                    <h1><span className="counter">100</span><span className="counterUp-icon">+</span> </h1>
-                                    <h6>Get Rewards</h6>
-                                </div>
-                            </div>
-                            <div className="col-md-3 col-sm-6 align-self-center">
-                                <div className="ltn__counterup-item text-center">
-                                    <div className="counter-icon">
-                                        {/* <!-- <img src="img/icons/icon-img/3.png" alt="#">  --> */}
-                                        <i className="flaticon-maps-and-location"></i>
-                                    </div>
-                                    <h1><span className="counter">21</span><span className="counterUp-icon">+</span> </h1>
-                                    <h6>Country Cover</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+               <CounterUp></CounterUp>
                 {/* <!-- COUNTER UP AREA END --> */}
 
                 {/* <!-- TEAM AREA START (Team - 3) --> */}
-                <div className="ltn__team-area pt-115 pb-90">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-12">
-                                <div className="section-title-area ltn__section-title-2--- text-center">
-                                    <h1 className="section-title">Our Expert Doctor</h1>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row justify-content-center">
-
-                            {
-                                ourExpeExpertDoctors.map(ourExpeExpertDoctor => (<div className="col-lg-4 col-sm-6">
-                                    <div className="ltn__team-item ltn__team-item-3---">
-                                        <div className="team-img">
-                                            <img src={ourExpeExpertDoctor.imageUrl} alt="Image" />
-                                        </div>
-                                        <div className="team-info">
-                                            <h4><a href="team-details.html">{ourExpeExpertDoctor.name}</a></h4>
-                                            <h6 className="ltn__secondary-color">{ourExpeExpertDoctor.title}</h6>
-                                            <div className="ltn__social-media">
-                                                <ul>
-                                                    <li><NavLink to={ourExpeExpertDoctor.faceBook}><i className="fab fa-facebook-f"></i></NavLink></li>
-                                                    <li><NavLink to={ourExpeExpertDoctor.twiter}><i className="fab fa-twitter"></i></NavLink></li>
-                                                    <li><NavLink to={ourExpeExpertDoctor.linkedIn}><i className="fab fa-linkedin"></i></NavLink></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>))
-                            }
-
-                        </div>
-                    </div>
-                </div>
+               <Team ourExpeExpertDoctors = {ourExpeExpertDoctors}></Team>
                 {/* <!-- TEAM AREA END --> */}
 
                 {/* <!-- VIDEO AREA START --> */}
-                <div className="ltn__video-popup-area ltn__video-popup-margin">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-12">
-                                <div className="ltn__video-bg-img ltn__video-popup-height-600 bg-overlay-black-10-- bg-image" style={{
-                                    backgroundImage: "url(" + "https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/bg/15.jpg" + ")",
-                                    backgroundPosition: 'center',
-                                    backgroundSize: 'cover',
-                                    backgroundRepeat: 'no-repeat'
-                                }}>
-                                    <a className="ltn__video-icon-2 ltn__video-icon-2-border border-radius-no" href="https://www.youtube.com/embed/Cr4LFOgRGeo?autoplay=1&showinfo=0" data-rel="lightcase:myCollection">
-                                        <i className="fa fa-play"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <Video></Video>
                 {/* <!-- VIDEO AREA END --> */}
 
                 {/* <!-- TESTIMONIAL AREA START (testimonial-4) --> */}

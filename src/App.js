@@ -4,7 +4,6 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import AboutNavBar from './Components/NavBarAboutComponents/AboutNavBar';
 import ServicesNavbar from './Components/NavBarAboutComponents/ServicesNavbar';
 import Login from './SharedPages/Login';
 import Register from './SharedPages/Register';
