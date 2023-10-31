@@ -4,7 +4,7 @@ import AboutNaveBarHeader from '../SharedPages/AboutNaveBarHeader';
 import AboutNavBarFooter from '../SharedPages/AboutNavBarFooter';
 import CallTo from '../Utils/CallTo';
 import Banner from '../assets/bg/144.jpg';
-import img21 from '../assets/icons/icon-img/21.png';
+
 import LeatestBlogs from '../Components/HomeComponent/LeatestBlogs';
 import ServiceBanner from '../Components/Service/ServiceBanner';
 import CoreServices from '../Components/Service/CoreServices';
