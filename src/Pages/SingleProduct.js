@@ -20,9 +20,7 @@ const SingleProduct = () => {
     const { id } = useParams()
 
     const [leatestProducts, setLeatestProducts] = useState([]);
-
     const [singleProduct, setSingleProduct] = useState([]);
-    console.log(singleProduct)
 
     useEffect(() => {
         fetch("/ProductData.json")

@@ -1,11 +1,8 @@
 import { NavLink } from 'react-router-dom';
 import { serviceDatas } from '../../Utils/serviceData';
-// import React, { useEffect} from 'react';
-
-
 
 const CoreServices = () => {
-   
+
     return (
         <div>
             <div className="ltn__service-area section-bg-1 pt-115 pb-70">
@@ -26,7 +23,7 @@ const CoreServices = () => {
                                         <img src={data.imageUrl} alt="#" />
                                     </div>
                                     <div className="ltn__feature-info">
-                                        <h3><NavLink to={`/service-details/${encodeURIComponent(data.title)}`}>{data?.title}</NavLink></h3>
+                                        <h3><NavLink to={`/service-details/${data.slug}`}>{data?.title}</NavLink></h3>
                                         <p>
                                             {data.content}
                                         </p>
