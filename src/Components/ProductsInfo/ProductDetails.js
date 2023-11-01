@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import SideBarProduct from "../../Utils/SideBarProduct";
 import SingleProductContent from "./SingleProductContent";
 import ProductDescription from "./ProductDescription";

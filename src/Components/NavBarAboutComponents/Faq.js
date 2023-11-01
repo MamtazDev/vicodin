@@ -35,10 +35,10 @@ const Faq = () => {
                                         </h6>
                                         <div id="faq-item-2-2" className="collapse show">
                                             <div className="card-body">
-                                            <div class="ltn__video-img alignleft">
+                                            <div className="ltn__video-img alignleft">
                                             <img src={Img17} alt="video popup bg image"/>
-                                            <a class="ltn__video-icon-2 ltn__video-icon-2-small ltn__video-icon-2-border----" href="https://www.youtube.com/embed/Cr4LFOgRGeo?autoplay=1&showinfo=0"  data-rel="lightcase:myCollection">
-                                                <i class="fa fa-play"></i>
+                                            <a className="ltn__video-icon-2 ltn__video-icon-2-small ltn__video-icon-2-border----" href="https://www.youtube.com/embed/Cr4LFOgRGeo?autoplay=1&showinfo=0"  data-rel="lightcase:myCollection">
+                                                <i className="fa fa-play"></i>
                                             </a>
                                         </div>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque </p>

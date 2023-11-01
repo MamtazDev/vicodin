@@ -15,6 +15,7 @@ import CheckOut from './Pages/CheckOut';
 import Contact from './Pages/Contact';
 import AboutUs from './Pages/About';
 import Service from './Pages/Service';
+import ServiceDetails from './Pages/ServiceDetails';
 
 function App() {
 
@@ -25,7 +26,7 @@ function App() {
         {/* navbar about section */}
         <Route path="/about" element={<AboutUs></AboutUs>} />
         <Route path="/service" element={<Service></Service>} />
-
+        <Route path="/service-details/:cat" element={<ServiceDetails/>} />
         {/* navbar about section */}
 
         {/* shop section */}
@@ -51,8 +52,6 @@ function App() {
         <Route path="/login" element={<Login></Login>} />
         <Route path="/register" element={<Register></Register>} />
         {/* Login and register */}
-
-
       </Routes>
 
       <ScrollTOTop></ScrollTOTop>

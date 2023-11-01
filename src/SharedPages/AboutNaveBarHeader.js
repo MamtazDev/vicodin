@@ -201,8 +201,8 @@ const AboutNaveBarHeader = () => {
 
 
             {/* <!-- Utilize Mobile Menu Start --> */}
-            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWith" aria-labelledby="offcanvasWithBothOptionsLabel">
-                <div class="offcanvas-body">
+            <div className="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWith" aria-labelledby="offcanvasWithBothOptionsLabel">
+                <div className="offcanvas-body">
                     <div className="ltn__utilize-mobile-menu">
                         <div className="ltn__utilize-menu-inner ltn__scrollbar">
                             <div className="ltn__utilize-menu-head">

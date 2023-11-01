@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import sidebarImg from "../assets/banner/sidebar.png"
 
 
 const SideBarProduct = ({ leatestProducts }) => {
@@ -37,7 +38,7 @@ const SideBarProduct = ({ leatestProducts }) => {
                 </div>
                 {/* <!-- Banner Widget --> */}
                 <div className="widget ltn__banner-widget">
-                    <NavLink to="/shopgrid"><img src="https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/banner/2.jpg" alt="Banner Image" /></NavLink>
+                    <NavLink to="/shopgrid"><img src={sidebarImg} alt="Banner Image" /></NavLink>
                 </div>
             </aside>
         </div>
