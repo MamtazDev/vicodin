@@ -1,4 +1,4 @@
-import { Link, NavLink, useParams } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import sideBanner from '../../assets/banner/serviceSide.png';
 import { serviceDatas } from '../../Utils/serviceData';
 
@@ -8,11 +8,13 @@ const ServiceSideBar = () => {
             <aside class="sidebar-area ltn__right-sidebar">
                 <div class="widget-2 ltn__menu-widget ltn__menu-widget-2 text-uppercase">
                     <ul>
-                        { serviceDatas.map((serviceData, index)=>(
-                        <li key={index}>
-                            <Link to={`/service-details/${serviceData.slug}`}>
-                            {serviceData.title} <span><i class="fas fa-arrow-right"></i></span></Link>
-                        </li>
+                        {serviceDatas.map((serviceData, index) => (
+                            <li key={index}>
+                                <Link to={`/service-details/${serviceData.slug}`}>
+                                    {serviceData.title} 
+                                    <span><i class="fas fa-arrow-right"></i></span>
+                                </Link>
+                            </li>
                         ))
                         }
                     </ul>
