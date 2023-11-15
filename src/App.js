@@ -2,7 +2,8 @@ import Home from './Pages/Home';
 import {
   BrowserRouter,
   Routes,
-  Route
+  Route,
+  Router
 } from "react-router-dom";
 import Login from './SharedPages/Login';
 import Register from './SharedPages/Register';
@@ -16,6 +17,7 @@ import Contact from './Pages/Contact';
 import AboutUs from './Pages/About';
 import Service from './Pages/Service';
 import ServiceDetails from './Pages/ServiceDetails';
+import WishList from './Pages/WishList';
 
 function App() {
 
@@ -23,6 +25,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />}></Route>
+
         {/* navbar about section */}
         <Route path="/about" element={<AboutUs></AboutUs>} />
         <Route path="/service" element={<Service></Service>} />
@@ -38,6 +41,8 @@ function App() {
         <Route path="/checkOut" element={<CheckOut></CheckOut>}/>
         {/* Cart Page */}
 
+        <Route path="/wishlist" element={<WishList></WishList>}/>
+
         {/* navbar contact */}
         <Route path="/contact" element={<Contact></Contact>} />
         <Route path="/accountdetails" element={<AccountDetails></AccountDetails>} />
@@ -46,7 +51,6 @@ function App() {
         {/* Product Details Show */}
         <Route path="/ProductDetails/:id" element={<SingleProduct></SingleProduct>} />
         {/* Product Details Show */}
-
 
         {/* Login and register */}
         <Route path="/login" element={<Login></Login>} />

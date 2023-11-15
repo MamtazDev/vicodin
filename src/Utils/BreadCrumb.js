@@ -5,7 +5,7 @@ const BreadCrumb = ({bannerImg, title}) => {
     const pathnameWithoutSlash = location.pathname.slice(1);
     return (
         <div>
-              <div className="ltn__breadcrumb-area text-left bg-overlay-white-30 bg-image " style={{
+              <div className="ltn__breadcrumb-area text-left  bg-image breadeCrumbImg" style={{
                 backgroundImage: `url(${bannerImg})`,
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',

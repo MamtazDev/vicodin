@@ -19548,3 +19548,9 @@ input.cart-plus-minus-box {
 .toggleBg svg{
   display: inline-block !important;
 }
+
+
+.breadeCrumbImg{
+  position: relative;
+  z-index: -1;
+}

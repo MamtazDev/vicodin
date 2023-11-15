@@ -5,7 +5,6 @@ import Logo3 from "../assets/logo-3.png";
 const AboutNaveBarHeader = () => {
     return (
         <>
-
             {/* <!-- HEADER AREA START (header-3) --> */}
             <header className="ltn__header-area ltn__header-3">
                 {/* <!-- ltn__header-top-area start --> */}

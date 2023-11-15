@@ -13,27 +13,27 @@ const ContactMessage = () => {
                                     <div className="row">
                                         <div className="col-md-6">
                                             <div className="input-item input-item-name ltn__custom-icon">
-                                                <input type="text" name="name" placeholder="Enter your name" />
+                                                <input type="text" name="name" id='name' placeholder="Enter your name" required />
                                             </div>
                                         </div>
                                         <div className="col-md-6">
                                             <div className="input-item input-item-email ltn__custom-icon">
-                                                <input type="email" name="email" placeholder="Enter email address" />
+                                                <input type="email" name="email" id='email' placeholder="Enter email address" required/>
                                             </div>
                                         </div>
                                         <div className="col-md-6">
                                             <div className="input-item input-item-subject ltn__custom-icon">
-                                                <input type="text" name="subject" placeholder="Enter the subject" />
+                                                <input type="text" name="subject" id='subject' placeholder="Enter the subject" required/>
                                             </div>
                                         </div>
                                         <div className="col-md-6">
                                             <div className="input-item input-item-phone ltn__custom-icon">
-                                                <input type="text" name="phone" placeholder="Enter phone number" />
+                                                <input type="text" name="phone" id='phone' placeholder="Enter phone number" required/>
                                             </div>
                                         </div>
                                     </div>
                                     <div className="input-item input-item-textarea ltn__custom-icon">
-                                        <textarea name="message" placeholder="Enter message"></textarea>
+                                        <textarea name="message" id='message' placeholder="Enter message" required></textarea>
                                     </div>
                                     <p><label className="input-info-save mb-0"><input type="checkbox" name="agree" /> Save my name, email, and website in this browser for the next time I comment.</label></p>
                                     <div className="btn-wrapper mt-0">
