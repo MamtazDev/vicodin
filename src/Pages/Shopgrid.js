@@ -10,16 +10,9 @@ const Shopgrid = () => {
     return (
         <div className="body-wrapper">
             <AboutNaveBarHeader></AboutNaveBarHeader>
-            <BreadCrumb title= "All Products" bannerImg = {Banner}></BreadCrumb>
-
-            {/* <!-- PRODUCT DETAILS AREA START --> */}
+            <BreadCrumb title="All Products" bannerImg={Banner}></BreadCrumb>
             <ShopGridProducts></ShopGridProducts>
-            {/* <!-- PRODUCT DETAILS AREA END --> */}
-
-            {/* <!-- CALL TO ACTION START (call-to-action-6) --> */}
-           <CallTo></CallTo>
-            {/* <!-- CALL TO ACTION END --> */}
-
+            <CallTo></CallTo>
             <AboutNavBarFooter></AboutNavBarFooter>
         </div>
     );
