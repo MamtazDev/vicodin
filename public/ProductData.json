@@ -4,7 +4,8 @@
         "productName": "Antiseptic Spray",
         "productPrice": 32.00,
         "productPreviousPrice": 46.00,
-        "imageUrl": "./img/product/p1.png",
+        // "imageUrl": "./img/product/p1.png",
+        "imageUrl": "../src/assets/banner/serviceDetail1.png",
         "detail": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae asperiores sit odit nesciunt, aliquid, deleniti non et ut dolorem!"
     },
     {
