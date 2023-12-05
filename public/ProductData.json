@@ -1,51 +1,50 @@
 [
-    {
-        "productID": 1,
-        "productName": "Antiseptic Spray",
-        "productPrice": 32.00,
-        "productPreviousPrice": 46.00,
-        // "imageUrl": "./img/product/p1.png",
-        "imageUrl": "../src/assets/banner/serviceDetail1.png",
-        "detail": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae asperiores sit odit nesciunt, aliquid, deleniti non et ut dolorem!"
-    },
-    {
-        "productID": 2,
-        "productName": "Digital Stethoscope",
-        "productPrice": 25.00,
-        "productPreviousPrice": 35.00,
-        "imageUrl": "./img/product/p2.png",
-        "detail": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae asperiores sit odit nesciunt, aliquid, deleniti non et ut dolorem!"
-    },
-    {
-        "productID": 3,
-        "productName": "Cosmetic Containers",
-        "productPrice": 75.00,
-        "productPreviousPrice": 92.00,
-        "imageUrl": "./img/product/p3.png",
-        "detail": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae asperiores sit odit nesciunt, aliquid, deleniti non et ut dolorem!"
-    },
-    {
-        "productID": 4,
-        "productName": "Cosmetic Containers",
-        "productPrice": 78.00,
-        "productPreviousPrice": 85.00,
-        "imageUrl": "./img/product/p4.png",
-        "detail": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae asperiores sit odit nesciunt, aliquid, deleniti non et ut dolorem!"
-    },
-    {
-        "productID": 5,
-        "productName": "Blue Hand Gloves",
-        "productPrice": 150.00,
-        "productPreviousPrice": 180.00,
-        "imageUrl": "./img/product/p5.png",
-        "detail": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae asperiores sit odit nesciunt, aliquid, deleniti non et ut dolorem!"
-    },
-    {
-        "productID": 6,
-        "productName": "Thermometer Gun",
-        "productPrice": 150.00,
-        "productPreviousPrice": 180.00,
-        "imageUrl": "./img/product/p6.png",
-        "detail": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae asperiores sit odit nesciunt, aliquid, deleniti non et ut dolorem!"
-    }
+  {
+    "productID": 1,
+    "productName": "Antiseptic Spray",
+    "productPrice": 32.0,
+    "productPreviousPrice": 46.0,
+    "imageUrl": "img/product/p1.png",
+    "detail": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae asperiores sit odit nesciunt, aliquid, deleniti non et ut dolorem!"
+  },
+  {
+    "productID": 2,
+    "productName": "Digital Stethoscope",
+    "productPrice": 25.0,
+    "productPreviousPrice": 35.0,
+    "imageUrl": "img/product/p2.png",
+    "detail": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae asperiores sit odit nesciunt, aliquid, deleniti non et ut dolorem!"
+  },
+  {
+    "productID": 3,
+    "productName": "Cosmetic Containers",
+    "productPrice": 75.0,
+    "productPreviousPrice": 92.0,
+    "imageUrl": "img/product/p3.png",
+    "detail": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae asperiores sit odit nesciunt, aliquid, deleniti non et ut dolorem!"
+  },
+  {
+    "productID": 4,
+    "productName": "Cosmetic Containers",
+    "productPrice": 78.0,
+    "productPreviousPrice": 85.0,
+    "imageUrl": "img/product/p4.png",
+    "detail": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae asperiores sit odit nesciunt, aliquid, deleniti non et ut dolorem!"
+  },
+  {
+    "productID": 5,
+    "productName": "Blue Hand Gloves",
+    "productPrice": 150.0,
+    "productPreviousPrice": 180.0,
+    "imageUrl": "img/product/p5.png",
+    "detail": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae asperiores sit odit nesciunt, aliquid, deleniti non et ut dolorem!"
+  },
+  {
+    "productID": 6,
+    "productName": "Thermometer Gun",
+    "productPrice": 150.0,
+    "productPreviousPrice": 180.0,
+    "imageUrl": "img/product/p6.png",
+    "detail": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae asperiores sit odit nesciunt, aliquid, deleniti non et ut dolorem!"
+  }
 ]

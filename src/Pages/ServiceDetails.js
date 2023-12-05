@@ -18,25 +18,25 @@ const ServiceDetails = () => {
                 <AboutNaveBarHeader></AboutNaveBarHeader>
                 <BreadCrumb title="Detail" bannerImg={Banner}></BreadCrumb>
 
-                <div class="ltn__page-details-area ltn__service-details-area mb-105">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-8">
+                <div className="ltn__page-details-area ltn__service-details-area mb-105">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-lg-8">
                                 {sortedData.map((detailsData, index) => (
-                                    <div key={index} class="ltn__page-details-inner ltn__service-details-inner">
-                                        <div class="ltn__blog-img">
+                                    <div key={index} className="ltn__page-details-inner ltn__service-details-inner">
+                                        <div className="ltn__blog-img">
                                             <img src={detailsData.BannerUrl} alt="Image" />
                                         </div>
-                                        <p><span class="ltn__first-letter">{detailsData?.serviceDetailOne[0]}</span>
+                                        <p><span className="ltn__first-letter">{detailsData?.serviceDetailOne[0]}</span>
                                             {detailsData.serviceDetailOne.slice(1, detailsData?.serviceDetailOne.length)}
                                         </p>
                                         <p> {detailsData.serviceDetailTwo} </p>
-                                        <div class="row">
-                                            <div class="col-lg-6">
+                                        <div className="row">
+                                            <div className="col-lg-6">
                                                 <img src={detailsData.innerUrl1} alt="image" />
                                                 <label>Image caption here.</label>
                                             </div>
-                                            <div class="col-lg-6">
+                                            <div className="col-lg-6">
                                                 <img src={detailsData.innerUrl2} alt="image" />
                                             </div>
                                         </div>
@@ -45,7 +45,7 @@ const ServiceDetails = () => {
                                     </div>
                                 ))}
                             </div>
-                            <div class="col-lg-4">
+                            <div className="col-lg-4">
                                 <ServiceSideBar />
                             </div>
                         </div>
