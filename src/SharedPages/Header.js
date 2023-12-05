@@ -6,7 +6,7 @@ import { ProductContext } from "../Context/ProductContext";
 
 const Header = () => {
   const { cart } = useContext(ProductContext);
-  const cartLength = cart.length
+  const cartLength = cart.length;
   return (
     <>
       <div className="body-wrapper">
@@ -175,7 +175,7 @@ const Header = () => {
                   <div className="mini-cart-icon" type="button">
                     <NavLink to="/cart" className="ltn__utilize-toggle">
                       <i className="fa-solid fa-cart-shopping"></i>
-                      <sup>2{cartLength}pp</sup>
+                      <sup>{cartLength}</sup>
                     </NavLink>
                   </div>
                   {/* <!-- mini-cart -->
