@@ -64,7 +64,11 @@ const ProductDetails = ({ singleProduct, leatestProducts }) => {
                       <div className="ltn__shop-details-small-img slick-arrow-2">
                         <div className="single-small-img">
                           {/* <img src={singleProduct?.imageUrl} alt="Image" /> */}
-                          <img src={`http://localhost:3000/${singleProduct?.imageUrl}`} alt={singleProduct?.imageUrl} />
+                          <img
+                            className="img-fluid"
+                            src={`http://localhost:3000/${singleProduct?.imageUrl}`}
+                            alt={singleProduct?.imageUrl}
+                          />
                           {/* <img src={`../../../public/${(singleProduct?.imageUrl)?.split("./")?.join("")}`} alt="" /> */}
                           {/* <img src={ProductImg} alt="" /> */}
                         </div>

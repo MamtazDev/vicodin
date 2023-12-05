@@ -1,13 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import { ProductContext } from "../../Context/ProductContext";
 
 const Product = () => {
-  const [products, setProducts] = useState([]);
-  useEffect(() => {
-    fetch("ProductData.json")
-      .then((res) => res.json())
-      .then((data) => setProducts(data));
-  }, []);
+  const { products, setProducts } = useContext(ProductContext);
+ 
 
   const [selectedProduct, setSelectedProduct] = useState(null);
 
@@ -187,7 +184,7 @@ const Product = () => {
                 ></button>
               </div>
               <div className="modal-body">
-                <img  src={selectedProduct?.imageUrl} alt="" />
+                <img src={selectedProduct?.imageUrl} alt="" />
               </div>
             </div>
           </div>
