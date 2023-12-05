@@ -3,8 +3,7 @@ import { NavLink } from "react-router-dom";
 import { ProductContext } from "../../Context/ProductContext";
 
 const Product = () => {
-  const { products, setProducts } = useContext(ProductContext);
- 
+  const { products ,addToCart} = useContext(ProductContext);
 
   const [selectedProduct, setSelectedProduct] = useState(null);
 
@@ -95,6 +94,7 @@ const Product = () => {
                               <a
                                 href="#"
                                 title="Add to Cart"
+                                onClick={() => addToCart(product)}
                                 data-bs-toggle="modal"
                                 data-bs-target="#add_to_cart_modal"
                               >
@@ -171,7 +171,7 @@ const Product = () => {
           aria-hidden="true"
         >
           <div className="modal-dialog  ">
-            <div className="modal-content">
+            <div className="modal-content p-3 rounded-4">
               <div className="modal-header">
                 <h1 className="modal-title fs-5" id="exampleModalLabel">
                   Product Details
@@ -183,8 +183,8 @@ const Product = () => {
                   aria-label="Close"
                 ></button>
               </div>
-              <div className="modal-body">
-                <img src={selectedProduct?.imageUrl} alt="" />
+              <div className="modal-body text-center">
+                <img height={300} src={selectedProduct?.imageUrl} alt="" />
               </div>
             </div>
           </div>

@@ -4,7 +4,12 @@ export const ProductContext = createContext();
 
 const ProductContextProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
-  const productValue = { products, setProducts };
+  const [cart, setCart] = useState([]);
+
+  const addToCart = (product) => {
+    setCart([...cart, product]);
+  };
+  const productValue = { products, setProducts, cart, setCart, addToCart };
   useEffect(() => {
     fetch("ProductData.json")
       .then((res) => res.json())

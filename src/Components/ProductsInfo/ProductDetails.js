@@ -5,11 +5,6 @@ import ProductReviews from "./ProductReviews";
 // import ProductImg from "../../../public/img/product/p1.png";
 
 const ProductDetails = ({ singleProduct, leatestProducts }) => {
-  console.log(singleProduct, "oooooooo");
-  console.log("./img/product/p1.png".split("./").join(""));
-  console.log(
-    `../../../public/${singleProduct?.imageUrl?.split("./").join("")}`
-  );
   return (
     <div>
       {/* <!-- SHOP DETAILS AREA START --> */}
@@ -65,6 +60,7 @@ const ProductDetails = ({ singleProduct, leatestProducts }) => {
                         <div className="single-small-img">
                           {/* <img src={singleProduct?.imageUrl} alt="Image" /> */}
                           <img
+                            style={{ height: "520px" }}
                             className="img-fluid"
                             src={`http://localhost:3000/${singleProduct?.imageUrl}`}
                             alt={singleProduct?.imageUrl}
