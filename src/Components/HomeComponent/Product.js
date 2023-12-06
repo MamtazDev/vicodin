@@ -4,7 +4,8 @@ import { ProductContext } from "../../Context/ProductContext";
 import ProductView from "../Modal/ProductView";
 
 const Product = () => {
-  const { products, addToCart, openModal } = useContext(ProductContext);
+  const { products, addToCart, openModal, addToWishList } =
+    useContext(ProductContext);
 
   return (
     <>
@@ -91,7 +92,10 @@ const Product = () => {
                               </p>
                             </li>
                             <li>
-                              <p title="Wishlist">
+                              <p
+                                onClick={() => addToWishList(product)}
+                                title="Wishlist"
+                              >
                                 <i className="far fa-heart"></i>
                               </p>
                             </li>
@@ -145,7 +149,7 @@ const Product = () => {
             </div>
           </div>
         </div>
-        <ProductView/>
+        <ProductView />
       </div>
       {/* <!-- PRODUCT AREA END --> */}
     </>

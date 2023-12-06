@@ -7,6 +7,7 @@ export const ProductContext = createContext();
 const ProductContextProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
+  const [wishList, setWishList] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   const openModal = (product) => {
@@ -28,6 +29,21 @@ const ProductContextProvider = ({ children }) => {
     }
     toast.success("Product added to cart!");
   };
+  const addToWishList = (product) => {
+    const isExist = wishList.find(
+      (item) => item.productID === product.productID
+    );
+    if (isExist) {
+      const updatedWishList = wishList.filter(
+        (item) => item.productID !== product.productID
+      );
+      setWishList(updatedWishList);
+    } else {
+      setWishList([...wishList, product]);
+    }
+
+    toast.success("Product added to wish List!");
+  };
 
   const productValue = {
     products,
@@ -37,6 +53,9 @@ const ProductContextProvider = ({ children }) => {
     addToCart,
     selectedProduct,
     openModal,
+    addToWishList,
+    wishList,
+    setWishList
   };
   useEffect(() => {
     fetch("ProductData.json")

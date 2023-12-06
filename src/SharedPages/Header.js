@@ -5,8 +5,9 @@ import Menubanner1 from "../assets/banner/menu-banner-1.png";
 import { ProductContext } from "../Context/ProductContext";
 
 const Header = () => {
-  const { cart } = useContext(ProductContext);
+  const { cart,wishList } = useContext(ProductContext);
   const cartLength = cart.length;
+  const wishListLength = wishList.length;
   return (
     <>
       <div className="body-wrapper">
@@ -176,6 +177,13 @@ const Header = () => {
                     <NavLink to="/cart" className="ltn__utilize-toggle">
                       <i className="fa-solid fa-cart-shopping"></i>
                       <sup>{cartLength}</sup>
+                    </NavLink>
+                  </div>
+                  {/* <!-- mini-cart --> */}
+                  <div className="mini-cart-icon" type="button">
+                    <NavLink to="/wishlist" className="ltn__utilize-toggle">
+                    <i class="fa-solid fa-heart"></i>
+                      <sup>{wishListLength}</sup>
                     </NavLink>
                   </div>
                   {/* <!-- mini-cart -->
