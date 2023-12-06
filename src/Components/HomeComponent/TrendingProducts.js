@@ -12,7 +12,7 @@ const TrendingProducts = () => {
   //     .then((data) => settrendingProducts(data));
   // }, []);
 
-  const { products, addToCart, selectedProduct, openModal } =
+  const { products, addToCart, addToWishList, openModal } =
     useContext(ProductContext);
   return (
     <>
@@ -66,7 +66,7 @@ const TrendingProducts = () => {
                           </p>
                         </li>
                         <li>
-                          <p title="Wishlist">
+                          <p   onClick={() => addToWishList(trendingProduct)} title="Wishlist">
                             <i className="far fa-heart"></i>
                           </p>
                         </li>

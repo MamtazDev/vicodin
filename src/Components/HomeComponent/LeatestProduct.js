@@ -13,7 +13,7 @@ const LeatestProduct = () => {
   //     .then((data) => setLeatestProducts(data));
   // }, []);
 
-  const { products, addToCart, selectedProduct, openModal } =
+  const { products, addToCart, addToWishList, openModal } =
     useContext(ProductContext);
 
   return (
@@ -53,8 +53,6 @@ const LeatestProduct = () => {
                           <p
                             title="Quick View"
                             onClick={() => openModal(leatestProduct)}
-                            data-bs-toggle="modal"
-                                data-bs-target="#exampleModal"
                           >
                             <i className="far fa-eye"></i>
                           </p>
@@ -63,17 +61,14 @@ const LeatestProduct = () => {
                           <p
                             onClick={() => addToCart(leatestProduct)}
                             title="Add to Cart"
-                            data-bs-toggle="modal"
-                            data-bs-target="#add_to_cart_modal"
                           >
                             <i className="fas fa-shopping-cart"></i>
                           </p>
                         </li>
                         <li>
                           <p
+                            onClick={() => addToWishList(leatestProduct)}
                             title="Wishlist"
-                            data-bs-toggle="modal"
-                            data-bs-target="#liton_wishlist_modal"
                           >
                             <i className="far fa-heart"></i>
                           </p>
@@ -126,7 +121,7 @@ const LeatestProduct = () => {
             ))}
           </div>
         </div>
-        <ProductView/>
+        <ProductView />
       </div>
       {/* <!-- PRODUCT AREA END --> */}
     </>
