@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
@@ -6,6 +7,9 @@ const Product = () => {
     useEffect(() => {
         // FEATURED PRODUCT API
     }, [])
+
+
+
 
     return (
         <>

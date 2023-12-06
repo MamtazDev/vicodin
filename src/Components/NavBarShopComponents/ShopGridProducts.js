@@ -1,10 +1,23 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { API } from '../../Api/product';
 
 const ShopGridProducts = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
         // API FOR PRODUCTS
+    }, [])
+
+    useEffect(() => {
+        // FEATURED PRODUCT API
+
+        // const data = axios.get('https://fakestoreapi.com/products')
+
+        const data = API.get("/products")
+
+        console.log("Fetched by Axios: ", data)
+
     }, [])
     return (
         <div>
