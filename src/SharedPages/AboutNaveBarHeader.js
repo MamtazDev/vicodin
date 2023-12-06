@@ -4,8 +4,9 @@ import Logo from "../assets/logo.png";
 import Logo3 from "../assets/logo-3.png";
 import { ProductContext } from "../Context/ProductContext";
 const AboutNaveBarHeader = () => {
-  const { cart } = useContext(ProductContext);
+  const { cart, wishList } = useContext(ProductContext);
   const cartLength = cart?.length;
+  const wishListLength = wishList?.length;
   return (
     <>
       {/* <!-- HEADER AREA START (header-3) --> */}
@@ -184,6 +185,16 @@ const AboutNaveBarHeader = () => {
                             <span>Your Cart</span>{" "}
                             <span className="ltn__secondary-color">$89.25</span>
                           </h6>
+                        </NavLink>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="mini-cart-icon mini-cart-icon-2">
+                        <NavLink to="/cart" className="ltn__utilize-toggle">
+                          <span className="mini-cart-icon">
+                            <i className="fa-solid fa-heart"></i>
+                            <sup>{wishListLength}</sup>
+                          </span>
                         </NavLink>
                       </div>
                     </li>

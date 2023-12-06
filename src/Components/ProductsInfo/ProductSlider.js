@@ -1,8 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { NavLink, useParams } from "react-router-dom";
 import Slider from "react-slick";
+import { ProductContext } from "../../Context/ProductContext";
+import ProductView from "../Modal/ProductView";
 
 const ProductSlider = ({ leatestProducts }) => {
+  const { products, addToCart, openModal, addToWishList } =
+    useContext(ProductContext);
+
   const settings = {
     infinite: true,
     arrows: false,
@@ -43,6 +48,7 @@ const ProductSlider = ({ leatestProducts }) => {
       },
     ],
   };
+
   return (
     <div>
       {/* <!-- PRODUCT SLIDER AREA START --> */}
@@ -70,8 +76,8 @@ const ProductSlider = ({ leatestProducts }) => {
                         to={`/ProductDetails/${leatestProductSingle?.productID}`}
                       >
                         <img
-                        height={300}
-                        className="w-100"
+                          height={300}
+                          className="w-100"
                           src={`http://localhost:3000/${leatestProductSingle?.imageUrl}`}
                           alt="#"
                         />
@@ -84,34 +90,32 @@ const ProductSlider = ({ leatestProducts }) => {
                       <div className="product-hover-action">
                         <ul>
                           <li>
-                            <a
-                              href="#"
-                              title="Quick View"
+                            <p
                               data-bs-toggle="modal"
-                              data-bs-target="#quick_view_modal"
+                              data-bs-target="#exampleModal"
+                              onClick={() => openModal(leatestProductSingle)}
+                              title="Quick View"
                             >
                               <i className="far fa-eye"></i>
-                            </a>
+                            </p>
                           </li>
                           <li>
-                            <a
-                              href="#"
+                            <p
+                              onClick={() => addToCart(leatestProductSingle)}
                               title="Add to Cart"
-                              data-bs-toggle="modal"
-                              data-bs-target="#add_to_cart_modal"
                             >
                               <i className="fas fa-shopping-cart"></i>
-                            </a>
+                            </p>
                           </li>
                           <li>
-                            <a
-                              href="#"
+                            <p
+                              onClick={() =>
+                                addToWishList(leatestProductSingle)
+                              }
                               title="Wishlist"
-                              data-bs-toggle="modal"
-                              data-bs-target="#liton_wishlist_modal"
                             >
                               <i className="far fa-heart"></i>
-                            </a>
+                            </p>
                           </li>
                         </ul>
                       </div>
@@ -165,6 +169,7 @@ const ProductSlider = ({ leatestProducts }) => {
           </div>
         </div>
       </div>
+      <ProductView />
       {/* <!-- PRODUCT SLIDER AREA END --> */}
     </div>
   );
