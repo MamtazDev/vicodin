@@ -12,9 +12,6 @@ const CartProductList = () => {
   const removeFromCart = (productId) => {
     const updatedCart = cart.filter((item) => item.productID !== productId);
     setCart(updatedCart);
-    console.log(productId, "id");
-    console.log(cart, "cartttt");
-    console.log(updatedCart, "updatedCart");
     toast.error("Product removed from cart!");
   };
   return (
@@ -56,7 +53,9 @@ const CartProductList = () => {
                     />
                   </div>
                 </td>
-                <td className="cart-product-subtotal">$298.00</td>
+                <td className="cart-product-subtotal">
+                  ${data?.productPrice * data?.quantity}
+                </td>
               </tr>
             ))}
           </tbody>
