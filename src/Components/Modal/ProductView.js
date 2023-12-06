@@ -25,7 +25,12 @@ const ProductView = () => {
               ></button>
             </div>
             <div className="modal-body text-center">
-              <img height={300} src={selectedProduct?.imageUrl} alt="" />
+              {/* <img height={300} src={selectedProduct?.imageUrl} alt="" /> */}
+              <img
+                height={300}
+                src={`http://localhost:3000/${selectedProduct?.imageUrl}`}
+                alt=""
+              />
               <h2 className="product-title">
                 <NavLink to={`/ProductDetails/${selectedProduct?.productID}`}>
                   {selectedProduct?.productName}
