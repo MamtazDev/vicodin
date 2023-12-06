@@ -34,7 +34,7 @@ const CoreFeature = () => {
                         </div>
                     </div>
                     <div className="row ltn__custom-gutter">
-                        {coreFeatures.map(coreFeature => (<div className="col-lg-3 col-sm-6 col-12">
+                        {coreFeatures.map((coreFeature, index) => (<div className="col-lg-3 col-sm-6 col-12" key={index}>
                             <div className="ltn__feature-item ltn__feature-item-6 text-center">
                                 <div className="ltn__feature-icon">
                                     {/* <!-- <span><i className="flaticon-apartment"></i></span> --> */}

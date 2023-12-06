@@ -1,6 +1,5 @@
 import Slider from 'react-slick';
 
-
 const ClientFeedBack = () => {
     const clientsFeedbacks = [
         {
@@ -93,7 +92,7 @@ const ClientFeedBack = () => {
                         <div className="row ltn__testimonial-slider-3-active slick-arrow-1 slick-arrow-1-inner">
                             <Slider {...settings}>
                                 {
-                                    clientsFeedbacks.map(clientsFeedback => (<div>
+                                    clientsFeedbacks.map((clientsFeedback, index) => (<div key={index}>
                                         <div className="col-lg-12">
                                             <div className="ltn__testimonial-item ltn__testimonial-item-4">
                                                 <div className="ltn__testimoni-img">

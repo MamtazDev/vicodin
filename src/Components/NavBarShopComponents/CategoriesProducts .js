@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
-const ShopGridProducts = () => {
+const CategoriesProducts = ({ params }) => {
     const [products, setProducts] = useState([]);
     // useEffect(() => {
     //     fetch("ProductData.json")
@@ -13,8 +13,10 @@ const ShopGridProducts = () => {
         fetch("https://fakestoreapi.com/products")
             .then((res) => res.json())
             .then(data => {
-                console.log("Products: ", data);
-                setProducts(data)
+                console.log("Products params: ", params);
+                const filteredData = data.filter((item) => item.category === params)
+                console.log("Products filteredData: ", filteredData);
+                setProducts(filteredData)
             }
             )
     }, [])
@@ -150,13 +152,13 @@ const ShopGridProducts = () => {
     );
 };
 
-export default ShopGridProducts;
+export default CategoriesProducts;
 
 
 
 
 function SingleProduct({ product, index }) {
-    console.log("product", product)
+    // console.log("product", product)
     const { id, title, image, descriptopm } = product
 
     return (

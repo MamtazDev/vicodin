@@ -67,7 +67,7 @@ const LeatestBlogs = () => {
                     <div className="row  ltn__blog-slider-one-active slick-arrow-12 ltn__blog-item-3-normal">
 
                         <Slider {...settings}>
-                            {leatestBloges.map(leatestBloge => (<div>
+                            {leatestBloges.map((leatestBloge, index) => (<div key={index}>
                                 <div className="col-lg-12">
                                     <div className="ltn__blog-item ltn__blog-item-3">
                                         <div className="ltn__blog-img">

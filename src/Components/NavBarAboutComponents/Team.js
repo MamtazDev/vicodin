@@ -42,7 +42,7 @@ const Team = () => {
                     <div className="row justify-content-center">
 
                         {
-                            ourExpeExpertDoctors.map(ourExpeExpertDoctor => (<div className="col-lg-4 col-sm-6">
+                            ourExpeExpertDoctors.map((ourExpeExpertDoctor, index) => (<div key={index} className="col-lg-4 col-sm-6">
                                 <div className="ltn__team-item ltn__team-item-3---">
                                     <div className="team-img">
                                         <img src={ourExpeExpertDoctor.imageUrl} alt="Image" />

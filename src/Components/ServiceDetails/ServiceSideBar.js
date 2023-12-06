@@ -11,7 +11,7 @@ const ServiceSideBar = () => {
                         {serviceDatas.map((serviceData, index) => (
                             <li key={index}>
                                 <Link to={`/service-details/${serviceData.slug}`}>
-                                    {serviceData.title} 
+                                    {serviceData.title}
                                     <span><i class="fas fa-arrow-right"></i></span>
                                 </Link>
                             </li>

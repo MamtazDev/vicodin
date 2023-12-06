@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import Logo from "../assets/logo.png";
 import Logo3 from "../assets/logo-3.png";
 const AboutNaveBarHeader = () => {
+    const isScrollEnabled = true;
     return (
         <>
             {/* <!-- HEADER AREA START (header-3) --> */}
@@ -172,9 +173,6 @@ const AboutNaveBarHeader = () => {
             </header>
             {/* <!-- HEADER AREA END --> */}
 
-
-
-
             {/* <!-- MOBILE MENU START --> */}
             <div className="mobile-header-menu-fullwidth mb-30 d-block d-lg-none">
                 <div className="container">
@@ -197,10 +195,8 @@ const AboutNaveBarHeader = () => {
             </div>
             {/* <!-- MOBILE MENU END --> */}
 
-
-
             {/* <!-- Utilize Mobile Menu Start --> */}
-            <div className="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWith" aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div className="offcanvas offcanvas-start" data-bs-scroll={isScrollEnabled.toString()} tabIndex="-1" id="offcanvasWith" aria-labelledby="offcanvasWithBothOptionsLabel">
                 <div className="offcanvas-body">
                     <div className="ltn__utilize-mobile-menu">
                         <div className="ltn__utilize-menu-inner ltn__scrollbar">

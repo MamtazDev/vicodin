@@ -1,6 +1,7 @@
 import Payment from '../../assets/icons/payment-3.png';
 
 const PaymentMethod = () => {
+    const isScrollEnabled = true;
     return (
         <div>
             <div className="ltn__checkout-payment-method mt-50">
@@ -19,7 +20,7 @@ const PaymentMethod = () => {
                     </div>
                     {/* <!-- card --> */}
                     <div className="card">
-                        <h5 className="ltn__card-title" data-bs-toggle="collapse" data-bs-target="#faq-item-2-2" aria-expanded="true">
+                        <h5 className="ltn__card-title" data-bs-toggle="collapse" data-bs-target="#faq-item-2-2" aria-expanded={isScrollEnabled.toString()}>
                             Cash on delivery
                         </h5>
                         <div id="faq-item-2-2" className="collapse show" data-bs-parent="#checkout_accordion_1">

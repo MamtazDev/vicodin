@@ -48,9 +48,9 @@ const Product = () => {
 
 
                                 {
-                                    products.map(product => (
+                                    products.map((product, index) => (
 
-                                        <div className="col-lg-3--- col-md-4 col-sm-6 col-6">
+                                        <div className="col-lg-3--- col-md-4 col-sm-6 col-6" key={index}>
                                             <div className="ltn__product-item ltn__product-item-2 text-left">
 
                                                 <div className="product-img">

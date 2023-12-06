@@ -67,7 +67,7 @@ const Brand = () => {
         <div className="container">
           <div className="row ltn__brand-logo-active">
             <Slider {...settings}>
-              {brands.map(brand => (<div>
+              {brands.map((brand, index) => (<div key={index}>
                 <div className="col-lg-12">
                   <div className="ltn__brand-logo-item">
                     <img src={brand.imageUrl} alt="Brand Logo" />
