@@ -4,11 +4,9 @@ import { NavLink } from "react-router-dom";
 const LeatestProduct = () => {
     const [leatestProducts, setLeatestProducts] = useState([]);
 console.log(leatestProducts)
-   
+
     useEffect(() =>{
-        fetch("ProductData.json")
-        .then((res) => res.json())
-        .then(data => setLeatestProducts(data))
+    //    LATEST PROUCT API
     },[])
     return (
         <>
@@ -72,7 +70,7 @@ console.log(leatestProducts)
                         </div>
                     </div>
                 </div>))
-                
+
             }
             </div>
         </div>

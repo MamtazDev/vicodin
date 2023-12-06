@@ -17,7 +17,6 @@ const WishList = () => {
         <div>
             <div class="body-wrapper">
                 <AboutNaveBarHeader></AboutNaveBarHeader>
-
                 <BreadCrumb title="Wishlist" bannerImg={Banner}></BreadCrumb>
 
                 {/* <!-- WISHLIST AREA START --> */}

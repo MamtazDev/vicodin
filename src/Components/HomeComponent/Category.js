@@ -4,9 +4,7 @@ import Slider from "react-slick";
 const Category = () => {
     const [categorys, setCategory] = useState([]);
     useEffect(() => {
-        fetch("categoryData.json")
-            .then((res) => res.json())
-            .then(data => setCategory(data))
+    //    API FOR CATEGORIES
     }, [])
     const settings = {
         infinite: true,
@@ -17,19 +15,7 @@ const Category = () => {
         slidesToShow: 7,
         slidesToScroll: 1,
         responsive: [
-            // {
-            //   breakpoint: 1024,
-            //   settings: {
-            //     autoplay: true,
-            //     cssEase: "linear",
-            //     autoplaySpeed: 2000,
-            //     infinite: true,
-            //     arrows: false,
-            //     speed: 500,
-            //     slidesToShow: 7,
-            //      slidesToScroll: 9,
-            //   }
-            // },
+            
             {
                 breakpoint: 600,
                 settings: {

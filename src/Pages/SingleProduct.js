@@ -10,7 +10,7 @@ import Banner from '../assets/bg/144.jpg';
 
 
 const SingleProduct = () => {
-    
+
     const { pathname } = useLocation();
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -23,16 +23,11 @@ const SingleProduct = () => {
     const [singleProduct, setSingleProduct] = useState([]);
 
     useEffect(() => {
-        fetch("/ProductData.json")
-            .then((res) => res.json())
-            .then(data => setLeatestProducts(data))
+        // API FOR SINGLE PRODUCTS
     }, [])
 
     useEffect(() => {
-        leatestProducts?.map(leatestProduct => (
-            leatestProduct?.productID == id ? setSingleProduct(leatestProduct) : <></>
-
-        ))
+        // SLOTING SINGLE PRODUCTS
     })
 
     return (

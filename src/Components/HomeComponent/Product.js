@@ -4,9 +4,7 @@ import { NavLink } from 'react-router-dom';
 const Product = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch("ProductData.json")
-            .then((res) => res.json())
-            .then(data => setProducts(data))
+        // FEATURED PRODUCT API
     }, [])
 
     return (

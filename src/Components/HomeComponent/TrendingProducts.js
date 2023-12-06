@@ -4,11 +4,9 @@ import { NavLink } from 'react-router-dom';
 const TrendingProducts = () => {
     const [trendingProducts, settrendingProducts] = useState([]);
 
-   
+
     useEffect(() =>{
-        fetch("ProductData.json")
-        .then((res) => res.json())
-        .then(data => settrendingProducts(data))
+        // API FOR TRANDING PRODUCT
     },[])
     return (
        <>
@@ -70,10 +68,10 @@ const TrendingProducts = () => {
                         </div>
                     </div>
                 </div>))
-                
+
 
 }
-               
+
             </div>
         </div>
     </div>

@@ -4,9 +4,7 @@ import Slider from "react-slick";
 const LeatestBlogs = () => {
     const [leatestBloges, setleatestBloge] = useState([]);
     useEffect(() => {
-        fetch("leatestBloge.json")
-            .then((res) => res.json())
-            .then(data => setleatestBloge(data))
+    //    LATES BLOG PRODUCTS
     }, [])
 
     const settings = {
