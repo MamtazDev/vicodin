@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { ProductContext } from "../../Context/ProductContext";
 
 const Product = () => {
-  const { products ,addToCart} = useContext(ProductContext);
+  const { products, addToCart } = useContext(ProductContext);
 
   const [selectedProduct, setSelectedProduct] = useState(null);
 
@@ -173,9 +173,6 @@ const Product = () => {
           <div className="modal-dialog  ">
             <div className="modal-content p-3 rounded-4">
               <div className="modal-header">
-                <h1 className="modal-title fs-5" id="exampleModalLabel">
-                  Product Details
-                </h1>
                 <button
                   type="button"
                   className="btn-close"
@@ -185,6 +182,15 @@ const Product = () => {
               </div>
               <div className="modal-body text-center">
                 <img height={300} src={selectedProduct?.imageUrl} alt="" />
+                <h2 className="product-title">
+                  <NavLink to={`/ProductDetails/${selectedProduct?.productID}`}>
+                    {selectedProduct?.productName}
+                  </NavLink>
+                </h2>
+                <div className="product-price">
+                  <span>${selectedProduct?.productPrice}</span>
+                  <del>${selectedProduct?.productPreviousPrice}</del>
+                </div>
               </div>
             </div>
           </div>
