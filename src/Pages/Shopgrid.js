@@ -4,17 +4,40 @@ import ShopGridProducts from '../Components/NavBarShopComponents/ShopGridProduct
 import CallTo from '../Utils/CallTo';
 import Banner from '../assets/bg/144.jpg';
 import BreadCrumb from '../Utils/BreadCrumb';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import CategoriesProducts from '../Components/NavBarShopComponents/CategoriesProducts ';
 
 const Shopgrid = () => {
+    const [categoryName, setCategoryName] = useState([])
+    useEffect(() => {
+        fetch("https://fakestoreapi.com/products/categories")
+            .then((res) => res.json())
+            .then(data => setCategoryName(data))
+    }, [])
+
+    const { id } = useParams();
 
     return (
-        <div className="body-wrapper">
-            <AboutNaveBarHeader></AboutNaveBarHeader>
-            <BreadCrumb title="All Products" bannerImg={Banner}></BreadCrumb>
-            <ShopGridProducts></ShopGridProducts>
-            <CallTo></CallTo>
-            <AboutNavBarFooter></AboutNavBarFooter>
-        </div>
+        <>
+            {id ?
+
+                <div className="body-wrapper">
+                    < AboutNaveBarHeader />
+                    <BreadCrumb title={categoryName.category} bannerImg={Banner}></BreadCrumb>
+                    <CategoriesProducts params={id} />
+                    <CallTo></CallTo>
+                    <AboutNavBarFooter></AboutNavBarFooter>
+                </div >
+
+                : <div className="body-wrapper">
+                    < AboutNaveBarHeader />
+                    <BreadCrumb title={categoryName.category} bannerImg={Banner}></BreadCrumb>
+                    <ShopGridProducts />
+                    <CallTo></CallTo>
+                    <AboutNavBarFooter></AboutNavBarFooter>
+                </div >}
+        </>
     );
 };
 

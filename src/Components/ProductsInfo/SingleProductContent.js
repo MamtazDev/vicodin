@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SingleProductContent = ({singleProduct}) => {
+const SingleProductContent = ({ singleProduct }) => {
     return (
         <div>
             <div className="modal-product-info shop-details-info pl-0">
@@ -14,10 +14,10 @@ const SingleProductContent = ({singleProduct}) => {
                         <li className="review-total"> <a href="#"> ( 95 Reviews )</a></li>
                     </ul>
                 </div>
-                <h3>{singleProduct.productName}</h3>
+                <h3>{singleProduct?.title}</h3>
                 <div className="product-price">
-                    <span>{singleProduct.productPrice}</span>
-                    <del>{singleProduct.productPreviousPrice}</del>
+                    <span>{singleProduct?.price}</span>
+                    <del>{singleProduct?.price}</del>
                 </div>
                 <div className="modal-product-meta ltn__product-details-menu-1">
                     <ul>

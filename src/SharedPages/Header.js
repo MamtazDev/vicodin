@@ -4,6 +4,7 @@ import Logo from "../assets/logo.png";
 import Menubanner1 from "../assets/banner/menu-banner-1.png";
 
 const header = () => {
+    const isScrollEnabled = true;
     return (
         <>
             <div className="body-wrapper">
@@ -58,7 +59,7 @@ const header = () => {
                                 <div className="col">
                                     <div className="site-logo-wrap">
                                         <div className="site-logo">
-                                            <NavLink tO="/"><img src={Logo} alt="Logo" /></NavLink>
+                                            <NavLink to="/"><img src={Logo} alt="Logo" /></NavLink>
                                         </div>
                                         <div className="get-support clearfix d-none">
                                             <div className="get-support-icon">
@@ -144,7 +145,7 @@ const header = () => {
                                         </NavLink>
                                     </div>
                                     {/* Mobile Menu Start */}
-                                    <div className="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                                    <div className="offcanvas offcanvas-start" data-bs-scroll={isScrollEnabled.toString()} tabIndex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
                                         <div className="offcanvas-body">
                                             <div className="ltn__utilize-mobile-menu">
                                                 <div className="ltn__utilize-menu-inner ltn__scrollbar">
@@ -221,10 +222,8 @@ const header = () => {
                 </header >
                 {/* <!-- HEADER AREA END --> */}
 
-
                 <div div className="ltn__utilize-overlay" ></div >
-
-            </div >
+            </div>
 
         </>
     );

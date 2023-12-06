@@ -38,11 +38,11 @@ const WishList = () => {
                                             </thead> --> */}
                                             <tbody>
                                                 {
-                                                    products.map(product => (
-                                                        <tr>
+                                                    products.map((product, index) => (
+                                                        <tr key={index}>
                                                             <td class="cart-product-remove">x</td>
                                                             <td class="cart-product-image">
-                                                            <NavLink to={`/ProductDetails/${product?.productID}`}><img src={product.imageUrl}alt="#" /></NavLink>
+                                                                <NavLink to={`/ProductDetails/${product?.productID}`}><img src={product.imageUrl} alt="#" /></NavLink>
                                                             </td>
                                                             <td class="cart-product-info">
                                                                 <h4>

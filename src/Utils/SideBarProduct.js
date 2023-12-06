@@ -10,7 +10,7 @@ const SideBarProduct = ({ leatestProducts }) => {
                     <h4 className="ltn__widget-title ltn__widget-title-border">Top Rated Product</h4>
                     <ul>
 
-                        {leatestProducts.slice(0, 3).map(leatestProductSingle => (<li>
+                        {leatestProducts.slice(0, 3).map((leatestProductSingle, index) => (<li key={index}>
                             <div className="top-rated-product-item clearfix">
                                 <div className="top-rated-product-img">
                                     <NavLink to={`/ProductDetails/${leatestProductSingle?.productID}`}><img src={leatestProductSingle.imageUrl} alt="#" /></NavLink>
@@ -18,14 +18,38 @@ const SideBarProduct = ({ leatestProducts }) => {
                                 <div className="top-rated-product-info">
                                     <div className="product-ratting">
                                         <ul>
-                                            <li><a href="#"><i className="fas fa-star"></i></a></li>
-                                            <li><a href="#"><i className="fas fa-star"></i></a></li>
-                                            <li><a href="#"><i className="fas fa-star"></i></a></li>
-                                            <li><a href="#"><i className="fas fa-star"></i></a></li>
-                                            <li><a href="#"><i className="fas fa-star"></i></a></li>
+                                            <li>
+                                                <a href="#">
+                                                    <i className="fas fa-star"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i className="fas fa-star"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i className="fas fa-star"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i className="fas fa-star"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i className="fas fa-star"></i>
+                                                </a>
+                                            </li>
                                         </ul>
                                     </div>
-                                    <h6><a href={`/ProductDetails/${leatestProductSingle?.productID}`}>{leatestProductSingle.productName}</a></h6>
+                                    <h6>
+                                        <a href={`/ProductDetails/${leatestProductSingle?.productID}`}>
+                                            {leatestProductSingle.productName}
+                                        </a>
+                                    </h6>
                                     <div className="product-price">
                                         <span>{leatestProductSingle.productPrice}</span>
                                         <del>{leatestProductSingle.productPreviousPrice}</del>

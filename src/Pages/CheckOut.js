@@ -59,7 +59,7 @@ const CheckOut = () => {
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <BillingDetail></BillingDetail>
                             </div>
                         </div>

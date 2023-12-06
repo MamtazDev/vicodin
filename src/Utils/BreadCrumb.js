@@ -1,11 +1,11 @@
 import { NavLink, useLocation } from "react-router-dom";
 
-const BreadCrumb = ({bannerImg, title}) => {
+const BreadCrumb = ({ bannerImg, title }) => {
     const location = useLocation();
-    const pathnameWithoutSlash = location.pathname.slice(1);
+    const pathnameWithoutSlash = location.pathname.slice(10);
     return (
         <div>
-              <div className="ltn__breadcrumb-area text-left  bg-image breadeCrumbImg" style={{
+            <div className="ltn__breadcrumb-area text-left  bg-image breadeCrumbImg" style={{
                 backgroundImage: `url(${bannerImg})`,
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
@@ -18,7 +18,11 @@ const BreadCrumb = ({bannerImg, title}) => {
                                 <h1 className="page-title">{title}</h1>
                                 <div className="ltn__breadcrumb-list">
                                     <ul>
-                                        <li><NavLink to="/"><span className="ltn__secondary-color"><i className="fas fa-home"></i></span> Home</NavLink></li>
+                                        <li><NavLink to="/">
+                                            <span className="ltn__secondary-color">
+                                                <i className="fas fa-home"></i>
+                                            </span> Home </NavLink>
+                                        </li>
                                         <li>{pathnameWithoutSlash}</li>
                                     </ul>
                                 </div>

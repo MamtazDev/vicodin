@@ -29,19 +29,20 @@ function App() {
         {/* navbar about section */}
         <Route path="/about" element={<AboutUs></AboutUs>} />
         <Route path="/service" element={<Service></Service>} />
-        <Route path="/service-details/:cat" element={<ServiceDetails/>} />
+        <Route path="/service-details/:cat" element={<ServiceDetails />} />
         {/* navbar about section */}
 
         {/* shop section */}
         <Route path="/shopgrid" element={<Shopgrid></Shopgrid>} />
+        <Route path="/category/:id" element={<Shopgrid></Shopgrid>} />
         {/* shop section */}
 
         {/* Cart Page */}
-        <Route path="/cart" element={<Cart></Cart>}/>
-        <Route path="/checkOut" element={<CheckOut></CheckOut>}/>
+        <Route path="/cart" element={<Cart></Cart>} />
+        <Route path="/checkOut" element={<CheckOut></CheckOut>} />
         {/* Cart Page */}
 
-        <Route path="/wishlist" element={<WishList></WishList>}/>
+        <Route path="/wishlist" element={<WishList></WishList>} />
 
         {/* navbar contact */}
         <Route path="/contact" element={<Contact></Contact>} />

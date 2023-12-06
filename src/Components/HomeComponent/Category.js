@@ -3,11 +3,15 @@ import { NavLink } from 'react-router-dom';
 import Slider from "react-slick";
 const Category = () => {
     const [categorys, setCategory] = useState([]);
+
     useEffect(() => {
-        fetch("categoryData.json")
+        fetch("https://fakestoreapi.com/products/categories")
             .then((res) => res.json())
             .then(data => setCategory(data))
     }, [])
+
+    console.log(categorys)
+
     const settings = {
         infinite: true,
         arrows: false,
@@ -17,19 +21,6 @@ const Category = () => {
         slidesToShow: 7,
         slidesToScroll: 1,
         responsive: [
-            // {
-            //   breakpoint: 1024,
-            //   settings: {
-            //     autoplay: true,
-            //     cssEase: "linear",
-            //     autoplaySpeed: 2000,
-            //     infinite: true,
-            //     arrows: false,
-            //     speed: 500,
-            //     slidesToShow: 7,
-            //      slidesToScroll: 9,
-            //   }
-            // },
             {
                 breakpoint: 600,
                 settings: {
@@ -42,6 +33,7 @@ const Category = () => {
                     slidesToScroll: 1,
                 }
             },
+
             {
                 breakpoint: 480,
                 settings: {
@@ -64,24 +56,36 @@ const Category = () => {
             <div className="ltn__category-area section-bg-12-- pt-50 pb-90 ">
                 <div className="container ">
                     <div className="row ltn__category-slider-active-six slick-arrow-1 border-bottom ">
+                        {/* <ul>
+
+                            {
+                                categorys.map((category, index) => (
+                                    <img src={category.image} alt="" />
+                                ))
+                            }
+                        </ul> */}
 
                         <Slider {...settings}>
-
-                            {categorys.map(category => (<div className="col-12">
-                                <div>
-                                    <div className="ltn__category-item ltn__category-item-6 text-center">
-                                        <div className="ltn__category-item-img">
-                                            <NavLink to="/shopgrid">
-                                                <i className={category.imageUrl}></i>
-                                            </NavLink>
+                            {
+                                categorys.map((category, index) => (
+                                    <div className="col-12" key={index}>
+                                        <div>
+                                            <div className="ltn__category-item ltn__category-item-6 text-center">
+                                                <div className="ltn__category-item-img">
+                                                </div>
+                                                <div className="ltn__category-item-name">
+                                                    <h6>
+                                                        <NavLink to={`category/${category}`}>
+                                                            {category}
+                                                        </NavLink>
+                                                    </h6>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div className="ltn__category-item-name">
-                                            <h6> <NavLink to="/shopgrid">{category.categoryName}</NavLink></h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>))}
+                                    </div>))
+                            }
                         </Slider>
+
                     </div>
                 </div>
             </div>

@@ -2,10 +2,44 @@ import SideBarProduct from "../../Utils/SideBarProduct";
 import SingleProductContent from "./SingleProductContent";
 import ProductDescription from "./ProductDescription";
 import ProductReviews from "./ProductReviews";
+import { useParams } from 'react-router-dom';
+import { useEffect, useState } from "react";
 
 const ProductDetails = ({ singleProduct, leatestProducts }) => {
+    const { id } = useParams();
+
+    const [SingleProduct, setSingleProduct] = useState(null)
+
+
+    // TODO:
+    // fetch all data from api
+    // fetch single data from specific api
+    // filter a single data from all product data
+
+    const allPropducts = () => fetch('https://fakestoreapi.com/products')
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+
+            const singleData = data.find(item => item.id === parseInt(id))
+            console.log("singleData: ", singleData);
+            setSingleProduct(singleData)
+
+        })
+
+    useEffect(() => {
+        allPropducts()
+    }, [])
+
+    // const allPropducts = fetch('https://fakestoreapi.com/products')
+    //     .then(res => res.json())
+    //     .then(json => console.log(json))
+
+
+
     return (
         <div>
+            {/* <h1>Product details: {id}</h1> */}
             {/* <!-- SHOP DETAILS AREA START --> */}
             <div className="ltn__shop-details-area pb-85">
                 <div className="container">
@@ -15,46 +49,10 @@ const ProductDetails = ({ singleProduct, leatestProducts }) => {
                                 <div className="row">
                                     <div className="col-md-6 image-box " onmousemove="zoom(event)" >
                                         <div className="ltn__shop-details-img-gallery ">
-                                            {/* <div className="ltn__shop-details-large-img">
-                                        <div className="single-large-img">
-                                            <a href="https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/product/1.png" data-rel="lightcase:myCollection">
-                                                <img src="img/product/1.png" alt="Image"/>
-                                            </a>
-                                        </div>
-                                        <div className="single-large-img">
-                                            <a href="https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/product/1.png" data-rel="lightcase:myCollection">
-                                                <img src="img/product/2.png" alt="Image"/>
-                                            </a>
-                                        </div>
-                                        <div className="single-large-img">
-                                            <a href="img/product/3.png" data-rel="lightcase:myCollection">
-                                                <img src="img/product/3.png" alt="Image"/>
-                                            </a>
-                                        </div>
-                                        <div className="single-large-img">
-                                            <a href="img/product/4.png" data-rel="lightcase:myCollection">
-                                                <img src="img/product/4.png" alt="Image"/>
-                                            </a>
-                                        </div>
-                                        <div className="single-large-img">
-                                            <a href="img/product/5.png" data-rel="lightcase:myCollection">
-                                                <img src="img/product/5.png" alt="Image"/>
-                                            </a>
-                                        </div>
-                                        <div className="single-large-img">
-                                            <a href="img/product/6.png" data-rel="lightcase:myCollection">
-                                                <img src="img/product/6.png" alt="Image"/>
-                                            </a>
-                                        </div>
-                                        <div className="single-large-img">
-                                            <a href="img/product/7.png" data-rel="lightcase:myCollection">
-                                                <img src="img/product/7.png" alt="Image"/>
-                                            </a>
-                                        </div>
-                                    </div> */}
+
                                             <div className="ltn__shop-details-small-img slick-arrow-2">
                                                 <div className="single-small-img">
-                                                    <img src={singleProduct.imageUrl} alt="Image" />
+                                                    <img src={SingleProduct?.image} alt="Image" />
                                                 </div>
 
                                             </div>
@@ -62,7 +60,7 @@ const ProductDetails = ({ singleProduct, leatestProducts }) => {
                                     </div>
 
                                     <div className="col-md-6">
-                                        <SingleProductContent singleProduct={singleProduct}></SingleProductContent>
+                                        <SingleProductContent singleProduct={SingleProduct}></SingleProductContent>
                                     </div>
                                 </div>
                             </div>

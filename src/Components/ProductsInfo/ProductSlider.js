@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { NavLink, useParams } from "react-router-dom";
 import Slider from "react-slick";
 
-const ProductSlider = ({leatestProducts}) => {
-   
+const ProductSlider = ({ leatestProducts }) => {
+
     const settings = {
         infinite: true,
         arrows: false,
@@ -46,8 +46,8 @@ const ProductSlider = ({leatestProducts}) => {
     };
     return (
         <div>
-             {/* <!-- PRODUCT SLIDER AREA START --> */}
-             <div className="ltn__product-slider-area ltn__product-gutter pb-70">
+            {/* <!-- PRODUCT SLIDER AREA START --> */}
+            <div className="ltn__product-slider-area ltn__product-gutter pb-70">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
@@ -62,7 +62,7 @@ const ProductSlider = ({leatestProducts}) => {
                         <Slider {...settings}>
 
                             {/* <!-- ltn__product-item --> */}
-                            {leatestProducts.map(leatestProductSingle => (<div className="col-lg-12">
+                            {leatestProducts.map((leatestProductSingle, index) => (<div key={index} className="col-lg-12">
                                 <div className="ltn__product-item ltn__product-item-3 text-center">
                                     <div className="product-img">
                                         <NavLink to={`/ProductDetails/${leatestProductSingle?.productID}`}><img src={leatestProductSingle.imageUrl} alt="#" /></NavLink>
