@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Footer from '../SharedPages/Footer';
 import Header from '../SharedPages/Header';
 import AboutUnderLeatest from '../Components/HomeComponent/AboutUnderLeatest';
@@ -19,8 +20,8 @@ const Home = () => {
     return (
         <div className="body-wrapper">
             <Header></Header>
-            <Slider></Slider>
-            <Category></Category>
+            {/* <Slider></Slider> */}
+            <Category />
             <About></About>
             <Banner></Banner>
             <Product></Product>

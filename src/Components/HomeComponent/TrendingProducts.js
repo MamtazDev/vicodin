@@ -1,14 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import ProductView from "../Modal/ProductView";
+import { ProductContext } from "../../Context/ProductContext";
 
 const TrendingProducts = () => {
-  const [trendingProducts, settrendingProducts] = useState([]);
+  // const [trendingProducts, settrendingProducts] = useState([]);
 
-  useEffect(() => {
-    fetch("ProductData.json")
-      .then((res) => res.json())
-      .then((data) => settrendingProducts(data));
-  }, []);
+  // useEffect(() => {
+  //   fetch("ProductData.json")
+  //     .then((res) => res.json())
+  //     .then((data) => settrendingProducts(data));
+  // }, []);
+
+  const { products, addToCart, selectedProduct, openModal } =
+    useContext(ProductContext);
   return (
     <>
       {/* <!-- PRODUCT AREA START (product-item-3) --> */}
@@ -23,14 +28,19 @@ const TrendingProducts = () => {
           </div>
           <div className="row ltn__tab-product-slider-one-active--- slick-arrow-1">
             {/* <!-- ltn__product-item --> */}
-            {trendingProducts.map((trendingProduct) => (
+            {products.map((trendingProduct) => (
               <div className="col-lg-3 col-md-4 col-sm-6 col-6">
                 <div className="ltn__product-item ltn__product-item-3 text-center">
                   <div className="product-img">
                     <NavLink
                       to={`/ProductDetails/${trendingProduct?.productID}`}
                     >
-                      <img className="w-100" height={300} src={trendingProduct.imageUrl} alt="#" />
+                      <img
+                        className="w-100"
+                        height={300}
+                        src={trendingProduct.imageUrl}
+                        alt="#"
+                      />
                     </NavLink>
                     <div className="product-badge">
                       <ul>{/* <li className="sale-badge">New</li> */}</ul>
@@ -38,34 +48,27 @@ const TrendingProducts = () => {
                     <div className="product-hover-action">
                       <ul>
                         <li>
-                          <a
-                            href="#"
-                            title="Quick View"
+                          <p
+                            onClick={() => openModal(trendingProduct)}
                             data-bs-toggle="modal"
-                            data-bs-target="#quick_view_modal"
+                            data-bs-target="#exampleModal"
+                            title="Quick View"
                           >
                             <i className="far fa-eye"></i>
-                          </a>
+                          </p>
                         </li>
                         <li>
-                          <a
-                            href="#"
+                          <p
+                            onClick={() => addToCart(trendingProduct)}
                             title="Add to Cart"
-                            data-bs-toggle="modal"
-                            data-bs-target="#add_to_cart_modal"
                           >
                             <i className="fas fa-shopping-cart"></i>
-                          </a>
+                          </p>
                         </li>
                         <li>
-                          <a
-                            href="#"
-                            title="Wishlist"
-                            data-bs-toggle="modal"
-                            data-bs-target="#liton_wishlist_modal"
-                          >
+                          <p title="Wishlist">
                             <i className="far fa-heart"></i>
-                          </a>
+                          </p>
                         </li>
                       </ul>
                     </div>
@@ -162,6 +165,7 @@ const TrendingProducts = () => {
             </div>
           </div>
         </div>
+        <ProductView />
       </div>
       {/* <!-- BANNER AREA END --> */}
     </>

@@ -1,15 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import { ProductContext } from "../../Context/ProductContext";
+import ProductView from "../Modal/ProductView";
 
 const LeatestProduct = () => {
-  const [leatestProducts, setLeatestProducts] = useState([]);
-  console.log(leatestProducts);
+  // const [leatestProducts, setLeatestProducts] = useState([]);
+  // console.log(leatestProducts);
 
-  useEffect(() => {
-    fetch("ProductData.json")
-      .then((res) => res.json())
-      .then((data) => setLeatestProducts(data));
-  }, []);
+  // useEffect(() => {
+  //   fetch("ProductData.json")
+  //     .then((res) => res.json())
+  //     .then((data) => setLeatestProducts(data));
+  // }, []);
+
+  const { products, addToCart, selectedProduct, openModal } =
+    useContext(ProductContext);
+
   return (
     <>
       {/* <!-- PRODUCT AREA START (product-item-3) --> */}
@@ -24,14 +30,19 @@ const LeatestProduct = () => {
           </div>
           <div className="row ltn__tab-product-slider-one-active--- slick-arrow-1">
             {/* <!-- ltn__product-item --> */}
-            {leatestProducts.map((leatestProduct) => (
-              <div className="col-lg-3 col-md-4 col-sm-6 col-6">
+            {products.map((leatestProduct, index) => (
+              <div key={index} className="col-lg-3 col-md-4 col-sm-6 col-6">
                 <div className="ltn__product-item ltn__product-item-3 text-left">
                   <div className="product-img">
                     {/* <NavLink to="/ProductDetails"><img src={leatestProduct.imageUrl}alt="#"/></NavLink > */}
 
                     <a href={`/ProductDetails/${leatestProduct?.productID}`}>
-                      <img className="w-100" height={300} src={leatestProduct.imageUrl} alt="#" />
+                      <img
+                        className="w-100"
+                        height={300}
+                        src={leatestProduct.imageUrl}
+                        alt="#"
+                      />
                     </a>
                     <div className="product-badge">
                       <ul>{/* <li className="sale-badge">New</li> */}</ul>
@@ -39,34 +50,33 @@ const LeatestProduct = () => {
                     <div className="product-hover-action">
                       <ul>
                         <li>
-                          <a
-                            href="#"
+                          <p
                             title="Quick View"
+                            onClick={() => openModal(leatestProduct)}
                             data-bs-toggle="modal"
-                            data-bs-target="#quick_view_modal"
+                                data-bs-target="#exampleModal"
                           >
                             <i className="far fa-eye"></i>
-                          </a>
+                          </p>
                         </li>
                         <li>
-                          <a
-                            href="#"
+                          <p
+                            onClick={() => addToCart(leatestProduct)}
                             title="Add to Cart"
                             data-bs-toggle="modal"
                             data-bs-target="#add_to_cart_modal"
                           >
                             <i className="fas fa-shopping-cart"></i>
-                          </a>
+                          </p>
                         </li>
                         <li>
-                          <a
-                            href="#"
+                          <p
                             title="Wishlist"
                             data-bs-toggle="modal"
                             data-bs-target="#liton_wishlist_modal"
                           >
                             <i className="far fa-heart"></i>
-                          </a>
+                          </p>
                         </li>
                       </ul>
                     </div>
@@ -116,6 +126,7 @@ const LeatestProduct = () => {
             ))}
           </div>
         </div>
+        <ProductView/>
       </div>
       {/* <!-- PRODUCT AREA END --> */}
     </>

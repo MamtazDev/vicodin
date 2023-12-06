@@ -2,8 +2,7 @@ import Home from './Pages/Home';
 import {
   BrowserRouter,
   Routes,
-  Route,
-  Router
+  Route
 } from "react-router-dom";
 import Login from './SharedPages/Login';
 import Register from './SharedPages/Register';

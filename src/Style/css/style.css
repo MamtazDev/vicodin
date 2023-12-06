@@ -9285,13 +9285,13 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   border-right: 0;
 }
 
-.product-hover-action li a {
+.product-hover-action li p {
   display: block;
   background-color: var(--white);
   font-weight: 700;
 }
 
-.product-hover-action li:hover a {
+.product-hover-action li:hover p {
   background-color: var(--ltn__secondary-color);
   color: var(--white);
 }
