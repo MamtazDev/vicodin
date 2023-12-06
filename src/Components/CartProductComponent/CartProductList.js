@@ -4,10 +4,19 @@ import Product2 from "../../assets/product/2.png";
 import Product3 from "../../assets/product/3.png";
 import { useContext } from "react";
 import { ProductContext } from "../../Context/ProductContext";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const CartProductList = () => {
-  const { cart } = useContext(ProductContext);
-  console.log(cart, "ooo");
+  const { cart, setCart } = useContext(ProductContext);
+  const removeFromCart = (productId) => {
+    const updatedCart = cart.filter((item) => item.productID !== productId);
+    setCart(updatedCart);
+    console.log(productId, "id");
+    console.log(cart, "cartttt");
+    console.log(updatedCart, "updatedCart");
+    toast.error("Product removed from cart!");
+  };
   return (
     <div>
       <div className="shoping-cart-table table-responsive">
@@ -15,7 +24,12 @@ const CartProductList = () => {
           <tbody>
             {cart.map((data, index) => (
               <tr key={index}>
-                <td className="cart-product-remove">x</td>
+                <td
+                  onClick={() => removeFromCart(data?.productID)}
+                  className="cart-product-remove"
+                >
+                  x
+                </td>
                 <td className="cart-product-image">
                   <NavLink to="">
                     <img
@@ -36,7 +50,7 @@ const CartProductList = () => {
                   <div className="cart-plus-minus">
                     <input
                       type="text"
-                      value="02"
+                      value={data?.quantity}
                       name="qtybutton"
                       className="cart-plus-minus-box"
                     />

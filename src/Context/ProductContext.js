@@ -14,7 +14,18 @@ const ProductContextProvider = ({ children }) => {
   };
 
   const addToCart = (product) => {
-    setCart([...cart, product]);
+    const isExist = cart.find((item) => item.productID === product.productID);
+    if (isExist) {
+      const newCart = cart.map((item) => {
+        if (item.productID === product.productID) {
+          item.quantity = item.quantity + 1;
+        }
+        return item;
+      });
+      setCart(newCart);
+    } else {
+      setCart([...cart, { ...product, quantity: 1 }]);
+    }
     toast.success("Product added to cart!");
   };
 

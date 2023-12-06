@@ -1,25 +1,21 @@
-import Home from './Pages/Home';
-import {
-  BrowserRouter,
-  Routes,
-  Route
-} from "react-router-dom";
-import Login from './SharedPages/Login';
-import Register from './SharedPages/Register';
-import ScrollTOTop from './SharedPages/ScrollTOTop';
-import AccountDetails from './SharedPages/AccountDetails';
-import Shopgrid from './Pages/Shopgrid';
-import SingleProduct from './Pages/SingleProduct';
-import Cart from './Pages/Cart';
-import CheckOut from './Pages/CheckOut';
-import Contact from './Pages/Contact';
-import AboutUs from './Pages/About';
-import Service from './Pages/Service';
-import ServiceDetails from './Pages/ServiceDetails';
-import WishList from './Pages/WishList';
+import Home from "./Pages/Home";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "./SharedPages/Login";
+import Register from "./SharedPages/Register";
+import ScrollTOTop from "./SharedPages/ScrollTOTop";
+import AccountDetails from "./SharedPages/AccountDetails";
+import Shopgrid from "./Pages/Shopgrid";
+import SingleProduct from "./Pages/SingleProduct";
+import Cart from "./Pages/Cart";
+import CheckOut from "./Pages/CheckOut";
+import Contact from "./Pages/Contact";
+import AboutUs from "./Pages/About";
+import Service from "./Pages/Service";
+import ServiceDetails from "./Pages/ServiceDetails";
+import WishList from "./Pages/WishList";
+import { ToastContainer } from "react-toastify";
 
 function App() {
-
   return (
     <BrowserRouter>
       <Routes>
@@ -28,7 +24,7 @@ function App() {
         {/* navbar about section */}
         <Route path="/about" element={<AboutUs></AboutUs>} />
         <Route path="/service" element={<Service></Service>} />
-        <Route path="/service-details/:cat" element={<ServiceDetails/>} />
+        <Route path="/service-details/:cat" element={<ServiceDetails />} />
         {/* navbar about section */}
 
         {/* shop section */}
@@ -36,19 +32,25 @@ function App() {
         {/* shop section */}
 
         {/* Cart Page */}
-        <Route path="/cart" element={<Cart></Cart>}/>
-        <Route path="/checkOut" element={<CheckOut></CheckOut>}/>
+        <Route path="/cart" element={<Cart></Cart>} />
+        <Route path="/checkOut" element={<CheckOut></CheckOut>} />
         {/* Cart Page */}
 
-        <Route path="/wishlist" element={<WishList></WishList>}/>
+        <Route path="/wishlist" element={<WishList></WishList>} />
 
         {/* navbar contact */}
         <Route path="/contact" element={<Contact></Contact>} />
-        <Route path="/accountdetails" element={<AccountDetails></AccountDetails>} />
+        <Route
+          path="/accountdetails"
+          element={<AccountDetails></AccountDetails>}
+        />
         {/* navbar contact */}
 
         {/* Product Details Show */}
-        <Route path="/ProductDetails/:id" element={<SingleProduct></SingleProduct>} />
+        <Route
+          path="/ProductDetails/:id"
+          element={<SingleProduct></SingleProduct>}
+        />
         {/* Product Details Show */}
 
         {/* Login and register */}
@@ -58,6 +60,7 @@ function App() {
       </Routes>
 
       <ScrollTOTop></ScrollTOTop>
+      <ToastContainer position="top-right" autoClose={3000} />
     </BrowserRouter>
   );
 }
