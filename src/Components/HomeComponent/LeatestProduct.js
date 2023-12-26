@@ -3,8 +3,6 @@ import { NavLink } from "react-router-dom";
 
 const LeatestProduct = () => {
     const [leatestProducts, setLeatestProducts] = useState([]);
-    // console.log(leatestProducts)
-
     useEffect(() => {
         fetch("ProductData.json")
             .then((res) => res.json())
