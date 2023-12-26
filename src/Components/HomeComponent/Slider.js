@@ -1,11 +1,10 @@
-import React from 'react';
+import React from "react";
 // import imga from "../Style/img/banner/144.jpg"
 import Slider2 from "react-slick";
 
 const Slider = () => {
-   
-    return (
-        <div style={{paddingTop: "200px"}}></div>
+  return (
+    <div style={{ paddingTop: "200px" }}></div>
     //     <>
 
     //      <div className="ltn__slider-area ltn__slider-3  section-bg-1">
@@ -88,7 +87,7 @@ const Slider = () => {
     //     </div>
     // </div>
     // </>
-    );
+  );
 };
 
 export default Slider;
