@@ -1,23 +1,34 @@
-import React from 'react';
-import "../../Style/css/outStyle.css"
+import React from "react";
+import "../../Style/css/outStyle.css";
 import Slider from "react-slick";
 
 const Brand = () => {
-
-  const brands = [{
-    "imageUrl": "https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/brand-logo/1.png"
-  }, {
-    "imageUrl": "https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/brand-logo/2.png"
-  }, {
-    "imageUrl": "https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/brand-logo/3.png"
-  }, {
-    "imageUrl": "https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/brand-logo/4.png"
-  }, {
-    "imageUrl": "https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/brand-logo/5.png"
-  }, {
-    "imageUrl": "https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/brand-logo/3.png"
-  },]
-
+  const brands = [
+    {
+      imageUrl:
+        "https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/brand-logo/1.png",
+    },
+    {
+      imageUrl:
+        "https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/brand-logo/2.png",
+    },
+    {
+      imageUrl:
+        "https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/brand-logo/3.png",
+    },
+    {
+      imageUrl:
+        "https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/brand-logo/4.png",
+    },
+    {
+      imageUrl:
+        "https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/brand-logo/5.png",
+    },
+    {
+      imageUrl:
+        "https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/brand-logo/3.png",
+    },
+  ];
 
   const settings = {
     infinite: true,
@@ -34,7 +45,7 @@ const Brand = () => {
           speed: 600,
           slidesToShow: 5,
           slidesToScroll: 5,
-        }
+        },
       },
       {
         breakpoint: 600,
@@ -44,7 +55,7 @@ const Brand = () => {
           speed: 600,
           slidesToShow: 5,
           slidesToScroll: 5,
-        }
+        },
       },
       {
         breakpoint: 480,
@@ -55,9 +66,9 @@ const Brand = () => {
           speed: 600,
           slidesToShow: 2,
           slidesToScroll: 2,
-        }
-      }
-    ]
+        },
+      },
+    ],
   };
   return (
     <>
@@ -67,13 +78,15 @@ const Brand = () => {
         <div className="container">
           <div className="row ltn__brand-logo-active">
             <Slider {...settings}>
-              {brands.map((brand, index) => (<div key={index}>
-                <div className="col-lg-12">
-                  <div className="ltn__brand-logo-item">
-                    <img src={brand.imageUrl} alt="Brand Logo" />
+              {brands.map((brand, index) => (
+                <div key={index}>
+                  <div className="col-lg-12">
+                    <div className="ltn__brand-logo-item">
+                      <img src={brand.imageUrl} alt="Brand Logo" />
+                    </div>
                   </div>
                 </div>
-              </div>))}
+              ))}
             </Slider>
           </div>
         </div>
